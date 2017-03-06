@@ -22,7 +22,6 @@ var AppComponent = (function () {
         this.router.events.subscribe(function (event) {
             var url = _this.router.url;
             _this.toolbarTitle = _this.previoudTitle = url.substring(1, 2).toUpperCase() + url.substring(2);
-            console.log(url.indexOf("home"));
             if (url.indexOf("home") == -1) {
                 _this.icon = "arrow_back";
             }
@@ -36,7 +35,6 @@ var AppComponent = (function () {
         this.innerWidth = event.target.innerWidth;
     };
     AppComponent.prototype.closeNavDrawerOrGoBack = function (sidenav) {
-        console.log("this icon is " + this.icon);
         if (this.icon == "arrow_back")
             this.router.navigate(["./home"]);
         else

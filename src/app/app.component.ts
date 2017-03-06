@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       let url = this.router.url;
       this.toolbarTitle = this.previoudTitle = url.substring(1, 2).toUpperCase() + url.substring(2);
-      console.log(url.indexOf("home"));
       if (url.indexOf("home") == -1) {
         this.icon = "arrow_back";
       }
@@ -37,7 +36,6 @@ export class AppComponent implements OnInit {
 
 
   closeNavDrawerOrGoBack(sidenav: any) {
-    console.log("this icon is " + this.icon);
     if (this.icon == "arrow_back")
       this.router.navigate(["./home"]);
     else 
