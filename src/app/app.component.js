@@ -11,12 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        this.innerHeight = (window.screen.height);
+        this.innerWidth = (window.screen.width);
     }
+    AppComponent.prototype.onResize = function (event) {
+        this.innerWidth = event.target.innerWidth;
+    };
+    AppComponent.prototype.closeNavDrawer = function (sidenav) {
+        if (sidenav.opened)
+            sidenav.toggle();
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             moduleId: module.id,
-            template: "<app-tab></app-tab><router-outlet></router-outlet>",
+            templateUrl: "./app.component.html"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

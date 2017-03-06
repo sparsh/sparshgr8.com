@@ -1,4 +1,25 @@
+
+
+:root {
+  --primary: #06c;
+}
 .primaryBackground{
-background:#06c;
+background:var(--primary);
 color:white
+}
+
+.clickable { cursor: pointer; }
+
+.example-icon {
+  padding: 40px 40px;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.example-tooltip-host {
+  display: inline-flex;
+  align-items: center;
+  margin: 50px;
 }

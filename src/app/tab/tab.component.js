@@ -16,7 +16,6 @@ var TabComponent = (function () {
         core_1.Component({
             selector: 'app-tab',
             moduleId: module.id,
-            styleUrls: ['./tab.styles.scss'],
             templateUrl: './tab.component.html',
         }), 
         __metadata('design:paramtypes', [])

@@ -11,10 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var HomeComponent = (function () {
     function HomeComponent() {
+        this.innerHeight = (window.screen.height) + "px";
+        this.innerWidth = (window.screen.width) + "px";
     }
+    HomeComponent.prototype.onResize = function (event) {
+        this.innerWidth = event.target.innerWidth;
+    };
     HomeComponent = __decorate([
         core_1.Component({
-            template: "app-home",
+            moduleId: module.id,
+            templateUrl: './home.component.html',
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
