@@ -9,16 +9,18 @@
             </nav>
       </md-sidenav>
       <md-toolbar class="primaryBackground">
-            <md-icon (click) ="sidenav.toggle()" class="md-24 example-icon">menu</md-icon>
-            <span>Sparsh Jain</span>
+            <md-icon (click)="sidenav.toggle()" class="md-24">menu</md-icon>
+            <span class="toolbar-title-style">Sparsh Jain</span>
 
             <!-- This fills the remaining space of the current row -->
-            
+
             <span class="example-fill-remaining-space example-tooltip-host"></span>
-            <md-icon mdTooltip="Tooltip!" [mdTooltipPosition]="below" class="md-24 example-icon">home</md-icon>
-            <md-icon class="md-24 example-icon">work</md-icon>
-            <md-icon class="md-24 example-icon">content_paste</md-icon>
-            <md-icon class="md-24 example-icon">edit</md-icon>
+            <div *ngIf="innerWidth>750">
+                  <md-icon mdTooltip="Tooltip!" [mdTooltipPosition]="below" class="md-24 toolbar-icon-style">home</md-icon>
+                  <md-icon class="md-24 toolbar-icon-style">work</md-icon>
+                  <md-icon class="md-24 toolbar-icon-style">content_paste</md-icon>
+                  <md-icon class="md-24 toolbar-icon-style">edit</md-icon>
+            </div>
       </md-toolbar>
 
 
