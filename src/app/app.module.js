@@ -12,14 +12,16 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var tab_component_1 = require("./tab/tab.component");
 var app_component_1 = require('./app.component');
+var material_1 = require('@angular/material');
 var home_component_1 = require('./home/home.component');
+require('hammerjs');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
+            imports: [material_1.MaterialModule, platform_browser_1.BrowserModule, app_routing_1.routing],
             declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, tab_component_1.TabComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [app_routing_1.appRoutingProviders]

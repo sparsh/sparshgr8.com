@@ -15,7 +15,9 @@ var TabComponent = (function () {
     TabComponent = __decorate([
         core_1.Component({
             selector: 'app-tab',
-            template: "tab",
+            moduleId: module.id,
+            styleUrls: ['./tab.styles.scss'],
+            templateUrl: './tab.component.html',
         }), 
         __metadata('design:paramtypes', [])
     ], TabComponent);

@@ -2,7 +2,9 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {TabComponent} from "./tab/tab.component"
 import { AppComponent }  from './app.component';
-import {HomeComponent} from './home/home.component'
+import { MaterialModule } from '@angular/material';
+import {HomeComponent} from './home/home.component';
+import 'hammerjs';
 import {
   routing,
   appRoutingProviders
@@ -10,7 +12,7 @@ import {
 
 
 @NgModule({
-  imports:      [ BrowserModule,routing ],
+  imports:      [ MaterialModule,BrowserModule,routing ],
   declarations: [ AppComponent,HomeComponent, TabComponent],
   bootstrap:    [ AppComponent ],
   providers: [appRoutingProviders]
