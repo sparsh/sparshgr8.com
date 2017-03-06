@@ -9,25 +9,54 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var AppComponent = (function () {
-    function AppComponent() {
-        this.innerHeight = (window.screen.height);
+    function AppComponent(router) {
+        this.router = router;
+        this.toolbarTitle = "Sparsh Jain";
+        this.icon = "menu";
         this.innerWidth = (window.screen.width);
     }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.router.events.subscribe(function (event) {
+            _this.toolbarTitle = _this.previoudTitle = _this.router.url.substring(1, 2).toUpperCase() + _this.router.url.substring(2);
+        });
+    };
     AppComponent.prototype.onResize = function (event) {
         this.innerWidth = event.target.innerWidth;
     };
-    AppComponent.prototype.closeNavDrawer = function (sidenav) {
-        if (sidenav.opened)
-            sidenav.toggle();
+    AppComponent.prototype.closeNavDrawerOrGoBack = function (sidenav) {
+        if (sidenav != null) {
+            if (sidenav.opened)
+                sidenav.toggle();
+        }
+        else {
+            this.router.navigate(["./home"]);
+        }
+    };
+    AppComponent.prototype.changeTitleTo = function (title) {
+        console.log("title is " + title + " toolbar title is " + this.toolbarTitle + " previous title is  " + this.previoudTitle);
+        if (title != null) {
+            if (this.toolbarTitle != title) {
+                this.previoudTitle = this.toolbarTitle;
+                this.toolbarTitle = title;
+            }
+        }
+        else
+            this.toolbarTitle = this.previoudTitle;
+    };
+    AppComponent.prototype.goToRouteLink = function (path) {
+        this.router.navigate(["./" + path]);
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             moduleId: module.id,
+            styles: ['md-icon:hover {cursor: pointer;}'],
             templateUrl: "./app.component.html"
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], AppComponent);
     return AppComponent;
 }());

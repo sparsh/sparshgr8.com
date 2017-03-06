@@ -1,7 +1,7 @@
 
 
 :root {
-  --primary: #06c;
+  --primary: #00838F;
 }
 .primaryBackground{
 background:var(--primary);
@@ -14,17 +14,11 @@ color:white
   flex: 1 1 auto;
 }
 
-.example-tooltip-host {
-  display: inline-flex;
-  align-items: center;
-  margin: 50px;
-}
-
 .toolbar-title-style{
   padding-left: 15px
 }
 
 .toolbar-icon-style{
-
+  
   padding-right: 60px;
 }

@@ -1,8 +1,12 @@
 
 
-import {HomeComponent} from "./home/home.component"
-import {RouterModule,Routes} from "@angular/router"
+import { HomeComponent } from "./home/home.component"
+import { RouterModule, Routes } from "@angular/router"
 
+import { AboutComponent } from './about/about.component'
+import { BlogComponent } from './blog/blog.component'
+import { ContactComponent } from './contact/contact.component'
+import { WorkComponent } from './work/work.component'
 const appRoutes: Routes = [
 
     {
@@ -14,7 +18,19 @@ const appRoutes: Routes = [
         path: 'home',
         component: HomeComponent
     },
-
+    {
+        path: 'blog',
+        component: BlogComponent
+    }, {
+        path: 'about',
+        component: AboutComponent
+    }, {
+        path: 'contact',
+        component: ContactComponent
+    }, {
+        path: 'work',
+        component: WorkComponent
+    },
 ];
 
 export const appRoutingProviders: any[] = [
