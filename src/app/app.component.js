@@ -20,27 +20,33 @@ var AppComponent = (function () {
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.router.events.subscribe(function (event) {
-            _this.toolbarTitle = _this.previoudTitle = _this.router.url.substring(1, 2).toUpperCase() + _this.router.url.substring(2);
+            var url = _this.router.url;
+            _this.toolbarTitle = _this.previoudTitle = url.substring(1, 2).toUpperCase() + url.substring(2);
+            console.log(url.indexOf("home"));
+            if (url.indexOf("home") == -1) {
+                _this.icon = "arrow_back";
+            }
+            else {
+                _this.icon = "menu";
+                _this.previoudTitle = _this.toolbarTitle = "Sparsh Jain";
+            }
         });
     };
     AppComponent.prototype.onResize = function (event) {
         this.innerWidth = event.target.innerWidth;
     };
     AppComponent.prototype.closeNavDrawerOrGoBack = function (sidenav) {
-        if (sidenav != null) {
-            if (sidenav.opened)
-                sidenav.toggle();
-        }
-        else {
+        console.log("this icon is " + this.icon);
+        if (this.icon == "arrow_back")
             this.router.navigate(["./home"]);
-        }
+        else
+            sidenav.toggle();
     };
     AppComponent.prototype.changeTitleTo = function (title) {
-        console.log("title is " + title + " toolbar title is " + this.toolbarTitle + " previous title is  " + this.previoudTitle);
         if (title != null) {
             if (this.toolbarTitle != title) {
                 this.previoudTitle = this.toolbarTitle;
-                this.toolbarTitle = title;
+                this.toolbarTitle = "Go to " + title;
             }
         }
         else

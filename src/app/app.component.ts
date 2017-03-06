@@ -1,5 +1,5 @@
-import { Component,OnInit } from '@angular/core';
-import { Router} from '@angular/router'
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 @Component({
   selector: 'my-app',
   moduleId: module.id,
@@ -15,14 +15,21 @@ export class AppComponent implements OnInit {
     this.innerWidth = (window.screen.width);
   }
 
-ngOnInit()
-{
-   this.router.events.subscribe((event) => {
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      let url = this.router.url;
+      this.toolbarTitle = this.previoudTitle = url.substring(1, 2).toUpperCase() + url.substring(2);
+      console.log(url.indexOf("home"));
+      if (url.indexOf("home") == -1) {
+        this.icon = "arrow_back";
+      }
+      else {
+        this.icon = "menu";
+        this.previoudTitle = this.toolbarTitle = "Sparsh Jain";
+      }
 
-   this.toolbarTitle =  this.previoudTitle = this.router.url.substring(1,2).toUpperCase() + this.router.url.substring(2);
-    
     });
-}
+  }
 
   onResize(event: any) {
     this.innerWidth = event.target.innerWidth;
@@ -30,21 +37,19 @@ ngOnInit()
 
 
   closeNavDrawerOrGoBack(sidenav: any) {
-    if (sidenav != null) {
-      if (sidenav.opened)
-        sidenav.toggle();
-    }
-    else {
+    console.log("this icon is " + this.icon);
+    if (this.icon == "arrow_back")
       this.router.navigate(["./home"]);
-    }
+    else 
+      sidenav.toggle();
+
   }
 
   changeTitleTo(title: string) {
-    console.log("title is " + title + " toolbar title is "+ this.toolbarTitle +" previous title is  "+ this.previoudTitle ) ;
     if (title != null) {
       if (this.toolbarTitle != title) {
         this.previoudTitle = this.toolbarTitle;
-        this.toolbarTitle = title;
+        this.toolbarTitle = "Go to " + title;
       }
     }
     else
