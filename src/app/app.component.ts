@@ -8,6 +8,7 @@ import { Resource } from './app.resource'
   templateUrl: "./app.component.html"
 })
 export class AppComponent implements OnInit {
+  
   toolbarTitle :string;
   previoudTitle: string;
   innerWidth: any;
@@ -59,7 +60,8 @@ export class AppComponent implements OnInit {
 
   }
 
-  goToRouteLink(path: string) {
+  goToRouteLink(path: string,sidenav:any) {
+      sidenav.close();
     this.router.navigate(["./" + path]);
   }
 

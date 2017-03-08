@@ -52,7 +52,8 @@ var AppComponent = (function () {
         else
             this.toolbarTitle = this.previoudTitle;
     };
-    AppComponent.prototype.goToRouteLink = function (path) {
+    AppComponent.prototype.goToRouteLink = function (path, sidenav) {
+        sidenav.close();
         this.router.navigate(["./" + path]);
     };
     AppComponent = __decorate([
