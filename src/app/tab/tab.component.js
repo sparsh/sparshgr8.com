@@ -9,16 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var app_resource_1 = require('../app.resource');
 var TabComponent = (function () {
-    function TabComponent() {
+    function TabComponent(resource, router) {
+        this.resource = resource;
+        this.router = router;
     }
+    TabComponent.prototype.goToRouteLink = function (path) {
+        this.router.navigate(["./" + path]);
+    };
     TabComponent = __decorate([
         core_1.Component({
             selector: 'app-tab',
             moduleId: module.id,
             templateUrl: './tab.component.html',
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [app_resource_1.Resource, router_1.Router])
     ], TabComponent);
     return TabComponent;
 }());

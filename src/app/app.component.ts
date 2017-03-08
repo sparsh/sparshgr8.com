@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
+import { Resource } from './app.resource'
 @Component({
   selector: 'my-app',
   moduleId: module.id,
@@ -7,12 +8,15 @@ import { Router } from '@angular/router'
   templateUrl: "./app.component.html"
 })
 export class AppComponent implements OnInit {
-  toolbarTitle = "Sparsh Jain";
+  toolbarTitle :string;
   previoudTitle: string;
   innerWidth: any;
-  icon: string = "menu";
-  constructor(private router: Router) {
+  icon: string;
+  constructor(private router: Router,
+              private resource : Resource) {
     this.innerWidth = (window.screen.width);
+    this.toolbarTitle = resource.personName;
+    this.icon = resource.hamburgIcon;
   }
 
   ngOnInit() {
@@ -20,11 +24,11 @@ export class AppComponent implements OnInit {
       let url = this.router.url;
       this.toolbarTitle = this.previoudTitle = url.substring(1, 2).toUpperCase() + url.substring(2);
       if (url.indexOf("home") == -1) {
-        this.icon = "arrow_back";
+        this.icon = this.resource.backIcon;
       }
       else {
-        this.icon = "menu";
-        this.previoudTitle = this.toolbarTitle = "Sparsh Jain";
+        this.icon = this.resource.hamburgIcon;
+        this.previoudTitle = this.toolbarTitle = this.resource.personName;
       }
 
     });
@@ -36,9 +40,9 @@ export class AppComponent implements OnInit {
 
 
   closeNavDrawerOrGoBack(sidenav: any) {
-    if (this.icon == "arrow_back")
+    if (this.icon == this.resource.backIcon)
       this.router.navigate(["./home"]);
-    else 
+    else
       sidenav.toggle();
 
   }

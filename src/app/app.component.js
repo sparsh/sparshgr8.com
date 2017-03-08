@@ -10,12 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var app_resource_1 = require('./app.resource');
 var AppComponent = (function () {
-    function AppComponent(router) {
+    function AppComponent(router, resource) {
         this.router = router;
-        this.toolbarTitle = "Sparsh Jain";
-        this.icon = "menu";
+        this.resource = resource;
         this.innerWidth = (window.screen.width);
+        this.toolbarTitle = resource.personName;
+        this.icon = resource.hamburgIcon;
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -23,11 +25,11 @@ var AppComponent = (function () {
             var url = _this.router.url;
             _this.toolbarTitle = _this.previoudTitle = url.substring(1, 2).toUpperCase() + url.substring(2);
             if (url.indexOf("home") == -1) {
-                _this.icon = "arrow_back";
+                _this.icon = _this.resource.backIcon;
             }
             else {
-                _this.icon = "menu";
-                _this.previoudTitle = _this.toolbarTitle = "Sparsh Jain";
+                _this.icon = _this.resource.hamburgIcon;
+                _this.previoudTitle = _this.toolbarTitle = _this.resource.personName;
             }
         });
     };
@@ -35,7 +37,7 @@ var AppComponent = (function () {
         this.innerWidth = event.target.innerWidth;
     };
     AppComponent.prototype.closeNavDrawerOrGoBack = function (sidenav) {
-        if (this.icon == "arrow_back")
+        if (this.icon == this.resource.backIcon)
             this.router.navigate(["./home"]);
         else
             sidenav.toggle();
@@ -60,7 +62,7 @@ var AppComponent = (function () {
             styles: ['md-icon:hover {cursor: pointer;}'],
             templateUrl: "./app.component.html"
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, app_resource_1.Resource])
     ], AppComponent);
     return AppComponent;
 }());

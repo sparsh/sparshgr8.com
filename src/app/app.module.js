@@ -18,6 +18,7 @@ var about_component_1 = require('./about/about.component');
 var blog_component_1 = require('./blog/blog.component');
 var contact_component_1 = require('./contact/contact.component');
 var work_component_1 = require('./work/work.component');
+var app_resource_1 = require('./app.resource');
 require('hammerjs');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
@@ -28,7 +29,7 @@ var AppModule = (function () {
             imports: [material_1.MaterialModule, platform_browser_1.BrowserModule, app_routing_1.routing],
             declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, tab_component_1.TabComponent, about_component_1.AboutComponent, blog_component_1.BlogComponent, contact_component_1.ContactComponent, work_component_1.WorkComponent],
             bootstrap: [app_component_1.AppComponent],
-            providers: [app_routing_1.appRoutingProviders]
+            providers: [app_routing_1.appRoutingProviders, app_resource_1.Resource]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

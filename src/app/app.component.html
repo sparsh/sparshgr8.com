@@ -1,35 +1,27 @@
 <md-sidenav-container class="example-sidenav-fab-container" (window:resize)="onResize($event)" fullscreen>
 
-      <md-sidenav [ngStyle]="{
-    'width' : sidenav.opened ? '25%' : '0%'
-      }" #sidenav mode="side">
+      <md-sidenav class="sidenav" #sidenav mode="side">
 
             <nav class="menu-nav">
-                  hi hello buffollow
+                  <app-tab>
+                  </app-tab>
             </nav>
       </md-sidenav>
       <md-toolbar class="primaryBackground">
-            <md-icon (click)="closeNavDrawerOrGoBack(sidenav)" class="md-24">{{icon}}</md-icon>
+            <md-icon  (click)="closeNavDrawerOrGoBack(sidenav)" class="md-24">{{icon}}</md-icon>
             <span class="toolbar-title-style">{{toolbarTitle}}</span>
 
             <!-- This fills the remaining space of the current row -->
 
             <span class="example-fill-remaining-space"></span>
             <div *ngIf="innerWidth>750">
-                  <md-icon (mouseleave)='changeTitleTo()' (click)="goToRouteLink('work')" (mouseover)='changeTitleTo("Work")' class="md-24 toolbar-icon-style">work</md-icon>
-                  <md-icon (mouseleave)='changeTitleTo()' (click)="goToRouteLink('about')" (mouseover)='changeTitleTo("About")' class="md-24 toolbar-icon-style">account_circle</md-icon>
-                  <md-icon (mouseleave)='changeTitleTo()' (click)="goToRouteLink('blog')" (mouseover)='changeTitleTo("Blog")' class="md-24 toolbar-icon-style">content_paste</md-icon>
-                  <md-icon (mouseleave)='changeTitleTo()' (click)="goToRouteLink('contact')" (mouseover)='changeTitleTo("Contact")' class="md-24 toolbar-icon-style">edit</md-icon>
+                  
+                  <md-icon *ngFor="let r of resource.toolbarIconsArray" (mouseleave)='changeTitleTo()' (click)="goToRouteLink(r.routeLink)"
+                        (mouseover)='changeTitleTo(r.toolbarTitle)' class="md-24 toolbar-icon-style">{{r.icon}}</md-icon>
             </div>
       </md-toolbar>
 
-
-
-      <div [ngStyle]="{
-    'opacity': sidenav.opened?0.5:1,
-    'width' : sidenav.opened ? '75%' : '100%',
-    'height' : '100%'
-      }">
+      <div class="light-background" style="height:100%;overflow-y:auto">
             <router-outlet></router-outlet>
       </div>
 

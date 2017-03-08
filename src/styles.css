@@ -2,6 +2,7 @@
 
 :root {
   --primary: #00838F;
+  --lightPrimary : #E0F2F1;
 }
 .primaryBackground{
 background:var(--primary);
@@ -21,4 +22,47 @@ color:white
 .toolbar-icon-style{
   
   padding-right: 60px;
+}
+
+.light-background{
+  background: var(--lightPrimary)
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.line{
+  height: 0.5px;
+  width: 100%;
+  background: var(--primary)
+}
+.sidenav
+{
+   max-width: 70px;margin-top: 5px
+}
+.paddingLeftRight
+{
+  padding-right: 2px;padding-left: 2px;
+}
+
+.center{
+   text-align: center;
+}
+.individualTab{
+  cursor: pointer;
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  margin: 0 auto;
+  color:var(--primary) !important;
+
+}
+
+.mdIconCenterClass
+{
+  width: 50%;
 }

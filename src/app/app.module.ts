@@ -8,7 +8,7 @@ import {AboutComponent} from './about/about.component'
 import {BlogComponent} from './blog/blog.component'
 import {ContactComponent} from './contact/contact.component'
 import {WorkComponent} from './work/work.component'
-
+import { Resource } from './app.resource'
 
 import 'hammerjs';
 import {
@@ -21,6 +21,6 @@ import {
   imports:      [ MaterialModule,BrowserModule,routing ],
   declarations: [ AppComponent,HomeComponent, TabComponent,AboutComponent,BlogComponent,ContactComponent,WorkComponent],
   bootstrap:    [ AppComponent ],
-  providers: [appRoutingProviders]
+  providers: [appRoutingProviders,Resource]
 })
 export class AppModule { }

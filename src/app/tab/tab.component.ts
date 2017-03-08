@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Router } from '@angular/router'
+import { Resource } from '../app.resource'
 @Component({
   selector: 'app-tab',
   moduleId: module.id,
@@ -7,8 +9,14 @@ import { Component } from '@angular/core';
 })
 export class TabComponent {
 
+constructor(private resource:Resource,
+private router: Router,)
+{
 
+}
 
- 
+   goToRouteLink(path: string) {
+    this.router.navigate(["./" + path]);
+  }
 
 }
