@@ -1,11 +1,11 @@
 
 
 :root {
-  --primary: #00838F;
-  --lightPrimary : #E0F2F1;
+  --primary: #0277BD;
+  --lightPrimary : #E1F5FE;
 }
 .primaryBackground{
-background:var(--primary);
+background:#0277BD;
 color:white
 }
 
@@ -25,7 +25,7 @@ color:white
 }
 
 .light-background{
-  background: var(--lightPrimary)
+  background: #E1F5FE
 }
 img {
     width: 100%;
@@ -39,11 +39,11 @@ img {
 .line{
   height: 0.5px;
   width: 100%;
-  background: var(--primary)
+  background:#0277BD;
 }
 .sidenav
 {
-   max-width: 70px;margin-top: 5px
+   max-width: 70px;
 }
 .paddingLeftRight
 {
@@ -58,11 +58,19 @@ img {
   padding: 10px 0px 10px 0px;
   text-align: center;
   margin: 0 auto;
-  color:var(--primary) !important;
+  color:#0277BD !important;
 
+}
+body
+{
+
+  font-family: 'Roboto', sans-serif;
 }
 
 .mdIconCenterClass
 {
   width: 50%;
+}
+.workTileStyle{
+  padding : 45px;
 }

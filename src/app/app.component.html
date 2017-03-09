@@ -2,21 +2,21 @@
 
       <md-sidenav class="sidenav" #sidenav mode="side">
 
-            <nav class="menu-nav">
-                  <div class="paddingLeftRight">
-                        <img src="asset/sparsh_circular_black.jpg">
-                  </div>
-                  <hr class="line">
+            <md-list class="menu-nav">
+                  <md-list-item>
+                        <img src="asset/sparsh_circular_black.png">
+                  </md-list-item>
 
+                       <md-divider class="individualTab" ></md-divider>
 
                   <div (click)="goToRouteLink(r.routeLink,sidenav)" *ngFor="let r of resource.navDrawerIcons">
                         <div class="individualTab">
                               <md-icon class="md-24 mdIconCenterClass">{{r.icon}}</md-icon>
                               <br>{{r.toolbarTitle.trim()}}
                         </div>
-                        <hr class="line">
+                       <md-divider class="individualTab" ></md-divider>
                   </div>
-            </nav>
+            </md-list>
       </md-sidenav>
       <md-toolbar class="primaryBackground">
             <md-icon (click)="closeNavDrawerOrGoBack(sidenav)" class="md-24">{{icon}}</md-icon>

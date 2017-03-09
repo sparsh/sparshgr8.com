@@ -1,1 +1,14 @@
-work
+<h2 style="margin-top: 30px" class="individualTab">{{resource.workTitle}}</h2>
+
+
+<md-grid-list  cols="4">
+    <md-grid-tile *ngFor="let work of resource.workDetailsArray;let index=index" [style.background]= "colors[index%3]" [colspan]="1" [rowspan]="1" >
+        <div class="workTileStyle individualTab">
+        <img [src]="work.coverurl">
+        <br>
+        
+        {{work.workTitle}}
+        {{work.platform}}
+        </div>
+    </md-grid-tile>
+</md-grid-list>
