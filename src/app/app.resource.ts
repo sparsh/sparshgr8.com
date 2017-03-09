@@ -93,9 +93,9 @@ export class Resource {
     downLoadResume = "Download Resume";
     aboutWebSite = "About This WebSite";
     aboutWebSiteDescription = "This WebSite is made in angular 2 and sourcecode can be seen at github.com/sparsh/sparshgr8.com"
-    aboutSocialDetailsArray = [{ path: "asset/github.png", link: "www.github.com/sparsh" },
+    aboutSocialDetailsArray = [{ path: "asset/github.png", link: "http://www.github.com/sparsh" },
     { path: "asset/so.png", link: "http://stackoverflow.com/users/3397757/sparsh" },
-    { path: "asset/facebook.png", link: "www.fb.com/sparshj" },
+    { path: "asset/facebook.png", link: "https://www.fb.com/sparshj" },
     { path: "asset/linkedin.png", link: "https://www.linkedin.com/in/sparsh-jain-0b183ba6/" },
     { path: "asset/twitter.png", link: "https://twitter.com/sparshgr8" }]
 }
