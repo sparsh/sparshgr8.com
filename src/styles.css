@@ -59,8 +59,34 @@ img {
   text-align: center;
   margin: 0 auto;
   color:#0277BD !important;
-
 }
+.colorPrimaryAndCenter{
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  margin: 0 auto;
+  color:#0277BD !important;
+}
+.colorPrimaryAndLeft{
+  padding: 10px 0px 10px 0px;
+  text-align: left;
+  margin: 0 auto;
+  color:#0277BD !important;
+}
+
+.colorSecondryAndCenter{
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  margin: 0 auto;
+  color:#000 !important;
+}
+
+.colorSecondryAndLeft{
+  padding: 10px 0px 10px 0px;
+  text-align: left !important;
+  margin: 0 auto;
+  color:#000 !important;
+}
+
 body
 {
 
@@ -73,4 +99,27 @@ body
 }
 .workTileStyle{
   padding : 45px;
+}
+
+.aboutExperienceTileStyle
+{
+
+}
+
+.majorGapLeftRight{
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.roundedBorder {
+width:150px;
+margin-top: 20px;
+text-align: center;
+padding-top: 8px;
+cursor: pointer;
+height:30px;
+-webkit-border-radius: 99px;
+-moz-border-radius: 99px;
+border-radius: 99px;
+background-color:#0277BD;
 }

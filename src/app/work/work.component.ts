@@ -8,7 +8,6 @@ import { Resource } from '../app.resource'
 export class WorkComponent {
 
 
-  colors = ["#80CBC4","#FFCC80","#FFAB91"];
   constructor(private resource: Resource)
   { 
 
