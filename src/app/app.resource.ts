@@ -98,4 +98,22 @@ export class Resource {
     { path: "asset/facebook.png", link: "https://www.fb.com/sparshj" },
     { path: "asset/linkedin.png", link: "https://www.linkedin.com/in/sparsh-jain-0b183ba6/" },
     { path: "asset/twitter.png", link: "https://twitter.com/sparshgr8" }]
+
+    contactTitle = "Contact Sparsh";
+    contactMessageHeading = "Message";
+    contactMessagehint="Type Your Message Here";
+    anonMessage = "Send anonymously ?";
+    toolTipMessage = "If you dont wish to reveal your identity you can send the message anonymously";
+    fullName = "Full Name";
+    emailHeading = "Email";
+    emailHint = "Your Email";
+    submit = "Submit";
+    error = "Slow connection please try again";
+    success = "Thanks For contacting Sparsh";
+    validText = "Please Enter Valid"
+
+
+
+
+
 }

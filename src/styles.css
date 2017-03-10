@@ -45,6 +45,14 @@ img {
 {
    max-width: 70px;
 }
+
+
+
+.cardMargin
+{
+  margin:10px;
+}
+
 .paddingLeftRight
 {
   padding-right: 2px;padding-left: 2px;
@@ -123,3 +131,21 @@ height:30px;
 border-radius: 99px;
 background-color:#0277BD;
 }
+
+.submitButton{
+  background: #0277BD ;
+  color: white !important;
+}
+
+
+.example-full-width {
+  width: 100%;
+}
+
+ .errorMessage {
+      position: absolute;
+      color: red;
+      margin-top: 10px;
+      font-size:0.63em;
+    
+ }

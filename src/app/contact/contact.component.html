@@ -1,1 +1,32 @@
-contact
+<md-card class="cardMargin">
+    <md-card-content>
+        <div [formGroup]="contactForm">
+            
+            <md-input-container class="example-full-width colorPrimaryAndLeft">
+                <textarea mdInput formControlName="message" [placeholder]="resource.contactMessagehint"></textarea>
+                <div class="errorMessage">
+                    <span *ngIf="!contactForm.controls['message'].valid && clicked">  {{resource.validText}} {{resource.contactMessageHeading}} </span>
+                </div>
+            </md-input-container>
+
+
+            <md-input-container class="example-full-width colorPrimaryAndLeft">
+                <input formControlName="fullName" mdInput [placeholder]="resource.fullName" />
+                <div class="errorMessage">
+                    <span *ngIf="!contactForm.controls['fullName'].valid && clicked">  {{resource.validText}} {{resource.contactMessageHeading}} </span>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="example-full-width colorPrimaryAndLeft">
+                <input mdInput formControlName="email" [placeholder]="resource.emailHint" />
+                <div class="errorMessage">
+                    <span *ngIf="!contactForm.controls['email'].valid && clicked">  {{resource.validText}} {{resource.contactMessageHeading}} </span>
+                </div>
+            </md-input-container>
+
+        </div>
+    </md-card-content>
+
+    <button class="submitButton" (click)="submitContactValuesToServer()" md-button>Submit</button>
+
+</md-card>
