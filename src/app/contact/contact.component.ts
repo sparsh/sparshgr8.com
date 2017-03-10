@@ -31,8 +31,7 @@ export class ContactComponent {
     if (this.contactForm.valid) {
 
       let dialogRef = this.dialog.open(DialogResultExampleDialog, {
-        height: '400px',
-        width: '600px',
+     
       });
       //submit values to server
       //  this.contactForm.reset();
@@ -49,5 +48,6 @@ export class ContactComponent {
   templateUrl: './contact.submit.alert.html',
 })
 export class DialogResultExampleDialog {
-  constructor(public dialogRef: MdDialogRef<DialogResultExampleDialog>) { }
+  constructor(private resource: Resource,
+  public dialogRef: MdDialogRef<DialogResultExampleDialog>) { }
 }
