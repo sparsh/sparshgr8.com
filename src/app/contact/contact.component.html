@@ -1,7 +1,7 @@
 <md-card class="cardMargin">
     <md-card-content>
         <div [formGroup]="contactForm">
-            
+
             <md-input-container class="example-full-width colorPrimaryAndLeft">
                 <textarea mdInput formControlName="message" [placeholder]="resource.contactMessagehint"></textarea>
                 <div class="errorMessage">
@@ -13,14 +13,14 @@
             <md-input-container class="example-full-width colorPrimaryAndLeft">
                 <input formControlName="fullName" mdInput [placeholder]="resource.fullName" />
                 <div class="errorMessage">
-                    <span *ngIf="!contactForm.controls['fullName'].valid && clicked">  {{resource.validText}} {{resource.contactMessageHeading}} </span>
+                    <span *ngIf="!contactForm.controls['fullName'].valid && clicked">  {{resource.validText}} {{resource.fullName}} </span>
                 </div>
             </md-input-container>
 
             <md-input-container class="example-full-width colorPrimaryAndLeft">
                 <input mdInput formControlName="email" [placeholder]="resource.emailHint" />
                 <div class="errorMessage">
-                    <span *ngIf="!contactForm.controls['email'].valid && clicked">  {{resource.validText}} {{resource.contactMessageHeading}} </span>
+                    <span *ngIf="!contactForm.controls['email'].valid && clicked">  {{resource.validText}} {{resource.emailHeading}} </span>
                 </div>
             </md-input-container>
 

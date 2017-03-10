@@ -22,7 +22,7 @@ var TabComponent = (function () {
     TabComponent = __decorate([
         core_1.Component({
             selector: 'app-tab',
-            moduleId: module.id,
+            
             templateUrl: './tab.component.html',
         }), 
         __metadata('design:paramtypes', [app_resource_1.Resource, router_1.Router])

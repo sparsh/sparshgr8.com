@@ -1,32 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>Sparsh Jain</title>
-    <base href="/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Angular Material Demo Application</title>
+  <base href="/">
 
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('main.js').catch(function(err){ console.error(err); });
-      System.config({
-  map: {
-    '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
-     'hammerjs': 'npm:hammerjs/hammer.js'
-  }
-});
-    </script>
-  </head>
-
-  <body>
-    <my-app>Loading...</my-app>
-  </body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.scss">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <my-app>Loading...</my-app>
+</body>
 </html>

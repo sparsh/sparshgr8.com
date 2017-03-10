@@ -27,12 +27,14 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [material_1.MaterialModule, platform_browser_1.BrowserModule, app_routing_1.routing,
+            imports: [
+                material_1.MaterialModule.forRoot(), platform_browser_1.BrowserModule, app_routing_1.routing,
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, tab_component_1.TabComponent, about_component_1.AboutComponent, blog_component_1.BlogComponent, contact_component_1.ContactComponent, work_component_1.WorkComponent],
+            declarations: [app_component_1.AppComponent, contact_component_1.DialogResultExampleDialog, home_component_1.HomeComponent, tab_component_1.TabComponent, about_component_1.AboutComponent, blog_component_1.BlogComponent, contact_component_1.ContactComponent, work_component_1.WorkComponent],
             bootstrap: [app_component_1.AppComponent],
-            providers: [app_routing_1.appRoutingProviders, app_resource_1.Resource]
+            providers: [app_routing_1.appRoutingProviders, app_resource_1.Resource],
+            entryComponents: [contact_component_1.DialogResultExampleDialog]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

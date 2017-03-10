@@ -47,39 +47,39 @@ export class Resource {
         {
             workTitle: "Health Quest",
             workDescription: "It is a health related application",
-            coverurl: "asset/sparsh_circular_black.png",
-            screenshotArray: ["asset/sparsh_circular_black.png", "asset/sparsh_circular_black.png"],
+            coverurl: "assets/sparsh_circular_black.png",
+            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
             platform: "Android"
 
         },
         {
             workTitle: "Health Quest",
             workDescription: "It is a health related application",
-            coverurl: "asset/sparsh_circular_black.png",
-            screenshotArray: ["asset/sparsh_circular_black.png", "asset/sparsh_circular_black.png"],
+            coverurl: "assets/sparsh_circular_black.png",
+            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
             platform: "Android"
         },
         {
             workTitle: "Health Quest",
             workDescription: "It is a health related application",
-            coverurl: "asset/sparsh_circular_black.png",
-            screenshotArray: ["asset/sparsh_circular_black.png", "asset/sparsh_circular_black.png"],
-            platform: "Android"
-
-        },
-        {
-            workTitle: "Health Quest",
-            workDescription: "It is a health related application",
-            coverurl: "asset/sparsh_circular_black.png",
-            screenshotArray: ["asset/sparsh_circular_black.png", "asset/sparsh_circular_black.png"],
+            coverurl: "assets/sparsh_circular_black.png",
+            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
             platform: "Android"
 
         },
         {
             workTitle: "Health Quest",
             workDescription: "It is a health related application",
-            coverurl: "asset/sparsh_circular_black.png",
-            screenshotArray: ["asset/sparsh_circular_black.png", "asset/sparsh_circular_black.png"],
+            coverurl: "assets/sparsh_circular_black.png",
+            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
+            platform: "Android"
+
+        },
+        {
+            workTitle: "Health Quest",
+            workDescription: "It is a health related application",
+            coverurl: "assets/sparsh_circular_black.png",
+            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
             platform: "Android"
 
         }
@@ -93,11 +93,11 @@ export class Resource {
     downLoadResume = "Download Resume";
     aboutWebSite = "About This WebSite";
     aboutWebSiteDescription = "This WebSite is made in angular 2 and sourcecode can be seen at github.com/sparsh/sparshgr8.com"
-    aboutSocialDetailsArray = [{ path: "asset/github.png", link: "http://www.github.com/sparsh" },
-    { path: "asset/so.png", link: "http://stackoverflow.com/users/3397757/sparsh" },
-    { path: "asset/facebook.png", link: "https://www.fb.com/sparshj" },
-    { path: "asset/linkedin.png", link: "https://www.linkedin.com/in/sparsh-jain-0b183ba6/" },
-    { path: "asset/twitter.png", link: "https://twitter.com/sparshgr8" }]
+    aboutSocialDetailsArray = [{ path: "assets/github.png", link: "http://www.github.com/sparsh" },
+    { path: "assets/so.png", link: "http://stackoverflow.com/users/3397757/sparsh" },
+    { path: "assets/facebook.png", link: "https://www.fb.com/sparshj" },
+    { path: "assets/linkedin.png", link: "https://www.linkedin.com/in/sparsh-jain-0b183ba6/" },
+    { path: "assets/twitter.png", link: "https://twitter.com/sparshgr8" }]
 
     contactTitle = "Contact Sparsh";
     contactMessageHeading = "Message";

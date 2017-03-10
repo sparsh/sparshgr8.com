@@ -4,7 +4,7 @@ import { Router } from '@angular/router'
 import { Resource } from '../app.resource'
 @Component({
   selector: 'app-tab',
-  moduleId: module.id,
+  
   templateUrl: './tab.component.html',
 })
 export class TabComponent {

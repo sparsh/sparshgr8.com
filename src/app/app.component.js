@@ -59,7 +59,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            moduleId: module.id,
+            
             styles: ['md-icon:hover {cursor: pointer;}'],
             templateUrl: "./app.component.html"
         }), 

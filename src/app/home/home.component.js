@@ -19,7 +19,7 @@ var HomeComponent = (function () {
     };
     HomeComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
+            
             templateUrl: './home.component.html',
         }), 
         __metadata('design:paramtypes', [])

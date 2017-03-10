@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { Resource } from './app.resource'
 @Component({
   selector: 'my-app',
-  moduleId: module.id,
+  
   styles: ['md-icon:hover {cursor: pointer;}'],
   templateUrl: "./app.component.html"
 })

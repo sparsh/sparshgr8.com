@@ -6,7 +6,7 @@ import { MaterialModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component'
 import { BlogComponent } from './blog/blog.component'
-import { ContactComponent } from './contact/contact.component'
+import { ContactComponent, DialogResultExampleDialog } from './contact/contact.component'
 import { WorkComponent } from './work/work.component'
 import { Resource } from './app.resource'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,11 +19,13 @@ import {
 
 
 @NgModule({
-  imports: [MaterialModule, BrowserModule, routing,
+  imports: [
+    MaterialModule.forRoot(), BrowserModule, routing,
     FormsModule,
     ReactiveFormsModule],
-  declarations: [AppComponent, HomeComponent, TabComponent, AboutComponent, BlogComponent, ContactComponent, WorkComponent],
+  declarations: [AppComponent, DialogResultExampleDialog, HomeComponent, TabComponent, AboutComponent, BlogComponent, ContactComponent, WorkComponent],
   bootstrap: [AppComponent],
-  providers: [appRoutingProviders, Resource]
+  providers: [appRoutingProviders, Resource],
+  entryComponents: [DialogResultExampleDialog]
 })
 export class AppModule { }

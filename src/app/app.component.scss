@@ -1,0 +1,94 @@
+md-sidenav-container.m2app-dark {
+  background: black;
+}
+
+.app-content {
+  padding: 5px;
+}
+
+.app-content md-card {
+  margin: 5px;
+}
+
+.app-sidenav {
+  min-width: 200px;
+}
+
+.app-content md-checkbox {
+  margin: 10px;
+}
+
+.app-toolbar-filler {
+  flex: 1 1 auto;
+}
+
+
+.app-action {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.app-spinner {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+
+.app-input-icon {
+  font-size: 16px;
+}
+
+.app-menu-button {
+  padding: 0;
+  min-width: 50px;
+}
+.app-button {
+  margin: 5px;
+}
+
+.app-list {
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.app-progress {
+  margin: 5px;
+}
+
+.example-h2 {
+  margin: 10px 0;
+  color: rgba(0,0,0,.54);
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 10px;
+}
+
+.mat-slider-horizontal {
+  width: 300px;
+}
+
+.mat-slider-vertical {
+  height: 300px;
+}
+
+md-chip {
+  max-width: 200px;
+}
+
+.app-sidebar-button {
+  width: inherit;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
