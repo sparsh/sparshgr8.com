@@ -1,17 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'angular-material-demo-theme.scss';
 
-
-
-:root {
-  --primary: #0277BD;
-  --lightPrimary : #E1F5FE;
-}
-.primaryBackground{
-background:#0277BD;
-color:white
-}
-
 .clickable { cursor: pointer; }
 
 .example-fill-remaining-space {
@@ -28,7 +17,7 @@ color:white
 }
 
 .light-background{
-  background: #E1F5FE
+  background: E1F5FE
 }
 img {
     width: 100%;
@@ -39,11 +28,6 @@ img {
     border-radius: 50%;
 }
 
-.line{
-  height: 0.5px;
-  width: 100%;
-  background:#0277BD;
-}
 .sidenav
 {
    max-width: 70px;
@@ -56,10 +40,13 @@ img {
   margin:10px;
 }
 
-.paddingLeftRight
+
+.paddingMedium
 {
-  padding-right: 2px;padding-left: 2px;
+  margin-top: 15px;
 }
+
+
 
 .center{
    text-align: center;
@@ -69,33 +56,40 @@ img {
   padding: 10px 0px 10px 0px;
   text-align: center;
   margin: 0 auto;
-  color:#0277BD !important;
+  color:mat-color($primary) !important;
 }
 .colorPrimaryAndCenter{
   padding: 10px 0px 10px 0px;
   text-align: center;
   margin: 0 auto;
-  color:#0277BD !important;
+  font-size:2.1em;
+  color:mat-color($primary) !important;
 }
 .colorPrimaryAndLeft{
   padding: 10px 0px 10px 0px;
   text-align: left;
+
+  font-size:1.7em;
   margin: 0 auto;
-  color:#0277BD !important;
+  color:mat-color($primary) !important;
 }
 
 .colorSecondryAndCenter{
   padding: 10px 0px 10px 0px;
   text-align: center;
+
+  font-size:1.2em;
   margin: 0 auto;
-  color:#000 !important;
+  color:mat-color($secondry) !important;
 }
 
 .colorSecondryAndLeft{
   padding: 10px 0px 10px 0px;
   text-align: left !important;
   margin: 0 auto;
-  color:#000 !important;
+
+  font-size:1.2em;
+  color:mat-color($secondry) !important;
 }
 
 body
@@ -112,10 +106,6 @@ body
   padding : 45px;
 }
 
-.aboutExperienceTileStyle
-{
-
-}
 
 .majorGapLeftRight{
   padding-right: 100px;
@@ -123,7 +113,7 @@ body
 }
 
 .roundedBorder {
-width:150px;
+width:200px;
 margin-top: 20px;
 text-align: center;
 padding-top: 8px;
@@ -132,11 +122,11 @@ height:30px;
 -webkit-border-radius: 99px;
 -moz-border-radius: 99px;
 border-radius: 99px;
-background-color:#0277BD;
+background-color:mat-color($primary);
 }
 
 .submitButton{
-  background: #0277BD ;
+  background: mat-color($primary) ;
   color: white !important;
 }
 
@@ -147,7 +137,7 @@ background-color:#0277BD;
 
  .errorMessage {
       position: absolute;
-      color: red;
+      color:  mat-color($warn) ;
       margin-top: 10px;
       font-size:0.63em;
     

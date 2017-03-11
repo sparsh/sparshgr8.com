@@ -1,36 +1,39 @@
 <img src="assets/code_cover.png" />
-<h1 class="colorPrimaryAndCenter">{{resource.aboutTitle}}</h1>
+<div class="colorPrimaryAndCenter">{{resource.aboutTitle}}</div>
 <div class="majorGapLeftRight">
-    <h3>{{resource.somethingAboutMe}}</h3>
+    <div class="colorSecondryAndLeft">{{resource.somethingAboutMe}}</div>
 
-    <h2 class="colorPrimaryAndLeft">{{resource.experience}}</h2>
+    <div class="colorPrimaryAndLeft">{{resource.experience}}</div>
 
     <md-grid-list rowHeight="50px" cols="1">
         <md-grid-tile *ngFor="let experience of resource.experienceDetailsArray;let index=index" [style.background]="resource.colors[index%3]"
             [colspan]="1" [rowspan]="1">
             <br>
-            <h3 class="colorSecondryAndLeft">{{experience.name}}</h3>
-            <h3 class="colorSecondryAndLeft">{{experience.post}}</h3>
+            <div class="colorSecondryAndLeft">{{experience.name}}</div>
+            <div class="colorSecondryAndLeft">{{experience.post}}</div>
 
         </md-grid-tile>
     </md-grid-list>
 
-    <div class="roundedBorder">{{resource.downLoadResume}}</div>
+    <md-chip-list class="mat-chip-list-stacked">
+        <md-chip class="paddingMedium" selected="true" color="primary">
+            {{resource.downLoadResume}}
+        </md-chip>
+    </md-chip-list>
 
+    <div style="margin-top: 10px" class="colorPrimaryAndLeft">{{resource.aboutWebSite}}</div>
 
-    <h2 style="margin-top: 10px" class="colorPrimaryAndLeft">{{resource.aboutWebSite}}</h2>
-
-    <h3 class="colorSecondryAndLeft">{{resource.aboutWebSiteDescription}}</h3>
+    <div class="colorSecondryAndLeft">{{resource.aboutWebSiteDescription}}</div>
 
 
 </div>
 
 
-<md-toolbar layout-align="center center" class="primaryBackground">
+<md-toolbar color="primary">
 
     <span class="example-fill-remaining-space"></span>
     <div style="padding-left: 10px;padding-right: 10px;cursor: pointer" *ngFor="let social of resource.aboutSocialDetailsArray">
-        <img (click) = "openLink(social.link)" [src] = "social.path">
+        <img (click)="openLink(social.link)" [src]="social.path">
     </div>
     <span class="example-fill-remaining-space"></span>
 
