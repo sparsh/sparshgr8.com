@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-@Component({
-  
+@Component({ 
+  styleUrls:["/../../styles.scss"],
   
   templateUrl: './blog.component.html',
 })

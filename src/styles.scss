@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'angular-material-demo-theme.scss';
 
+
+
+md-icon:hover {cursor: pointer;}
 .clickable { cursor: pointer; }
 
 .example-fill-remaining-space {
@@ -28,6 +31,9 @@ img {
     border-radius: 50%;
 }
 
+.cursor{
+  cursor : pointer;
+}
 .sidenav
 {
    max-width: 70px;

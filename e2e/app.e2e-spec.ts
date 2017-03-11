@@ -1,10 +1,10 @@
-import { Material2DemoPage } from './app.po';
+import { CreditPage } from './app.po';
 
-describe('material2-demo App', function() {
-  let page: Material2DemoPage;
+describe('credit App', function() {
+  let page: CreditPage;
 
   beforeEach(() => {
-    page = new Material2DemoPage();
+    page = new CreditPage();
   });
 
   it('should display message saying app works', () => {

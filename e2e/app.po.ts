@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class Material2DemoPage {
+export class CreditPage {
   navigateTo() {
     return browser.get('/');
   }

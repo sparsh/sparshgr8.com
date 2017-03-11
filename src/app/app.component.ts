@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 import { Resource } from './app.resource'
-@Component({
+@Component({ 
+  styleUrls:["../styles.scss"],
   selector: 'my-app',
-  
-  styles: ['md-icon:hover {cursor: pointer;}'],
   templateUrl: "./app.component.html"
 })
 export class AppComponent implements OnInit {
