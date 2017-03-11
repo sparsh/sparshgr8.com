@@ -80,6 +80,18 @@ img {
   color:mat-color($primary) !important;
 }
 
+.colorPrimaryAndLeftSmallFont
+{
+
+    padding: 10px 0px 10px 0px;
+  text-align: left;
+
+  font-size:1.2em;
+  margin: 0 auto;
+  color:mat-color($primary) !important;
+
+}
+
 .colorSecondryAndCenter{
   padding: 10px 0px 10px 0px;
   text-align: center;
