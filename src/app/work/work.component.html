@@ -1,15 +1,15 @@
 <div style="margin-top: 30px" class="colorPrimaryAndCenter">{{resource.workTitle}}</div>
 
 <div class="majorGapLeftRight">
-<md-grid-list  cols="4">
-    <md-grid-tile class="individualTab" *ngFor="let work of resource.workDetailsArray;let index=index" [style.background]= "resource.colors[index%3]" [colspan]="1" [rowspan]="1" >
-        <div class="workTileStyle individualTab">
-        <img [src]="work.coverurl">
-        <br>
-        
-        {{work.workTitle}}
-        {{work.platform}}
-        </div>
-    </md-grid-tile>
-</md-grid-list>
+    <md-grid-list cols="4">
+        <md-grid-tile class="individualTab" *ngFor="let work of resource.workDetailsArray;let index=index" [style.background]="resource.colors[index%3]"
+            [colspan]="1" [rowspan]="1">
+            <md-card>
+                <div class="workTileStyle individualTab">
+                    <img [src]="work.coverurl">
+                    <br> {{work.workTitle}} {{work.platform}}
+                </div>
+            </md-card>
+        </md-grid-tile>
+    </md-grid-list>
 </div>
