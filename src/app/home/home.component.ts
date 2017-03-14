@@ -1,22 +1,32 @@
 import { Component } from '@angular/core';
 
-@Component({ 
-  styleUrls:["/../../styles.scss"],
-  templateUrl:'./home.component.html',
+import { Resource } from '../app.resource'
+@Component({
+  styleUrls: ["/../../styles.scss"],
+  templateUrl: './home.component.html',
 })
-export class HomeComponent  { 
-  
+export class HomeComponent {
+
 
   innerHeight: any;
-    innerWidth: any;
-    constructor() {
-        this.innerHeight = (window.screen.height) + "px";
-        this.innerWidth = (window.screen.width) + "px";
-    }
+  innerWidth: any;
+  constructor(private resource: Resource) {
+    this.innerHeight = (window.screen.height);
+    this.innerWidth = (window.screen.width);
+  }
 
 
-    onResize(event:any) {
-this.innerWidth =   event.target.innerWidth;
-}
+  onResize(event: any) {
+    this.innerWidth = event.target.innerWidth;
+  }
+
+
+  getColumnOnBasisOfDeviceWidth() {
+
+ 
+    return Math.floor(this.innerWidth/400);
+
+
+  }
 
 }

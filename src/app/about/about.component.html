@@ -32,7 +32,7 @@
 <md-toolbar color="primary">
 
     <span class="example-fill-remaining-space"></span>
-    <div style="padding-left: 10px;padding-right: 10px;cursor: pointer" *ngFor="let social of resource.aboutSocialDetailsArray">
+    <div class="toolbar-icon-style cursor" *ngFor="let social of resource.aboutSocialDetailsArray">
         <img (click)="openLink(social.link)" [src]="social.path">
     </div>
     <span class="example-fill-remaining-space"></span>

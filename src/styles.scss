@@ -4,8 +4,6 @@
 
 
 md-icon:hover {cursor: pointer;}
-.clickable { cursor: pointer; }
-
 .example-fill-remaining-space {
   flex: 1 1 auto;
 }
@@ -16,15 +14,11 @@ md-icon:hover {cursor: pointer;}
 
 .toolbar-icon-style{
   
-  padding-right: 60px;
+  padding-left: 8%;
 }
 
 .light-background{
   background: E1F5FE
-}
-img {
-    width: 100%;
-    height: auto;
 }
 
 .img-circle {
@@ -80,6 +74,11 @@ img {
   color:mat-color($primary) !important;
 }
 
+.imageFullWidth {
+    width: 100%;
+    height: auto;
+}
+
 .colorPrimaryAndLeftSmallFont
 {
 
@@ -126,8 +125,8 @@ body
 
 
 .majorGapLeftRight{
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 15%;
+  padding-left: 15%;
 }
 
 .roundedBorder {

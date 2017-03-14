@@ -89,7 +89,7 @@ export class Resource {
     aboutTitle = "About Me";
     somethingAboutMe = "My name is sparsh etc.";
     experience = "Experience";
-    experienceDetailsArray = [{ name: "Benepik", post: "CTO" }, { name: "Benepik", post: "CTO" }, { name: "Benepik", post: "CTO" }]
+    experienceDetailsArray = [{ name: "Benepik", post: "Sample Design" }, { name: "Benepik", post: "Sample Design" }, { name: "Benepik", post: "Sample Design" }]
     downLoadResume = "Download Resume";
     aboutWebSite = "About This WebSite";
     aboutWebSiteDescription = "This WebSite is made in angular 2 and sourcecode can be seen at github.com/sparsh/sparshgr8.com"
@@ -99,9 +99,16 @@ export class Resource {
     { path: "assets/linkedin.png", link: "https://www.linkedin.com/in/sparsh-jain-0b183ba6/" },
     { path: "assets/twitter.png", link: "https://twitter.com/sparshgr8" }]
 
+
+
+    homeImageDetailsArray = [{ path: "assets/intro.png" },
+    { path: "assets/occu.png" },
+    { path: "assets/self.png" },
+    ]
+
     contactTitle = "Contact Sparsh";
     contactMessageHeading = "Message";
-    contactMessagehint="Type Your Message Here";
+    contactMessagehint = "Type Your Message Here";
     anonMessage = "Send anonymously ?";
     toolTipMessage = "If you dont wish to reveal your identity you can send the message anonymously";
     fullName = "Full Name";

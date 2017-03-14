@@ -1,1 +1,22 @@
-<img src="assets/home_background.jpg">
+ <md-grid-list (window:resize)="onResize($event)" rowHeight="700px" [cols]="getColumnOnBasisOfDeviceWidth()">
+        <md-grid-tile *ngFor="let homeImage of resource.homeImageDetailsArray;let index=index">
+            <img [src]="homeImage.path">
+        </md-grid-tile>
+    </md-grid-list>
+<!--<md-grid-list cols="3">
+        <div *ngFor="let homeImage of resource.homeImageDetailsArray;let index=index" 
+        >
+            <img [src] = "homeImage.path">
+
+        </div>
+    </md-grid-list>-->
+
+<!-- 
+
+    <md-card style="display: flex;width:100%;flex-direction: row">
+    <md-card  style="flex: 1" *ngFor="let homeImage of resource.homeImageDetailsArray;let index=index">
+        <img [src]="homeImage.path">
+
+    </md-card>
+    </md-card>
+    -->

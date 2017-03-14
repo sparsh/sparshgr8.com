@@ -10,11 +10,9 @@ export class AppComponent implements OnInit {
   
   toolbarTitle :string;
   previoudTitle: string;
-  innerWidth: any;
   icon: string;
   constructor(private router: Router,
               private resource : Resource) {
-    this.innerWidth = (window.screen.width);
     this.toolbarTitle = resource.personName;
     this.icon = resource.hamburgIcon;
   }
@@ -34,9 +32,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  onResize(event: any) {
-    this.innerWidth = event.target.innerWidth;
-  }
+
 
 
   closeNavDrawerOrGoBack(sidenav: any) {
