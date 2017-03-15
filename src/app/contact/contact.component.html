@@ -23,10 +23,10 @@
                     <span *ngIf="!contactForm.controls['email'].valid && clicked">  {{resource.validText}} {{resource.emailHeading}} </span>
                 </div>
             </md-input-container>
+            <button color="primary" (click)="submitContactValuesToServer()" md-raised-button>Submit</button>
 
         </div>
 
-     <button color="primary" (click)="submitContactValuesToServer()" md-raised-button>Submit</button>
-    </md-card-content>
+        </md-card-content>
 
 </md-card>
