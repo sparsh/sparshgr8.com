@@ -2,7 +2,7 @@
 
 export class Resource {
 
-    colors = ["#80CBC4", "#FFCC80", "#FFAB91"];
+    colors = ["#80CBC4", "#FFCC80", "#FFAB91","#9FA8DA"];
     hamburgIcon = "menu";
     backIcon = "arrow_back";
     personName = "Sparsh Jain";
@@ -76,6 +76,13 @@ export class Resource {
 
         },
         {
+            workTitle: "Health Quest",
+            workDescription: "It is a health related application",
+            coverurl: "assets/sparsh_circular_black.png",
+            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
+            platform: "Android"
+
+        },   {
             workTitle: "Health Quest",
             workDescription: "It is a health related application",
             coverurl: "assets/sparsh_circular_black.png",

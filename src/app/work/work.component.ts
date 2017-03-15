@@ -7,15 +7,32 @@ import {Router} from '@angular/router'
 })
 export class WorkComponent {
 
+  innerWidth: any;
   constructor(private resource: Resource,
               private router: Router)
   { 
 
+
+    this.innerWidth = (window.screen.width);
   }
 
   openWorkDetails(index:number)
   {
     this.router.navigate(['workDetailsInner/' + index]);
   }
+
+
+    getColumnOnBasisOfDeviceWidth() {
+
+    let columns : number = Math.floor(this.innerWidth/400);
+    return columns == 0 ? 1 : columns;
+
+
+  }
+
+     onResize(event: any) {
+    this.innerWidth = event.target.innerWidth;
+  }
+
 
 }

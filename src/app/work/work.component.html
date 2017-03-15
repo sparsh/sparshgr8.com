@@ -1,8 +1,11 @@
-<div style="margin-top: 30px" class="colorPrimaryAndCenter">{{resource.workTitle}}</div>
+<div  (window:resize)="onResize($event)" style="margin-top: 30px" class="colorPrimaryAndCenter">{{resource.workTitle}}</div>
 
 <div class="majorGapLeftRight">
-<md-grid-list  cols="4">
-    <md-grid-tile (click) = "openWorkDetails(index)" class="individualTab" *ngFor="let work of resource.workDetailsArray;let index=index" [style.background]= "resource.colors[index%3]" [colspan]="1" [rowspan]="1" (click) = "openWorkDetails(index)" >
+<md-grid-list rowHeight = "350px" [cols]="getColumnOnBasisOfDeviceWidth()">
+    <md-grid-tile (click) = "openWorkDetails(index)" class="individualTab" 
+    *ngFor="let work of resource.workDetailsArray;let index=index" 
+    [style.background]= "resource.colors[index%(getColumnOnBasisOfDeviceWidth()+1)]" [colspan]="1" [rowspan]="1" 
+    (click) = "openWorkDetails(index)" >
      
         <div class="workTileStyle individualTab">
         <img [src]="work.coverurl">
