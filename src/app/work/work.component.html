@@ -1,19 +1,15 @@
-<div  (window:resize)="onResize($event)" style="margin-top: 30px" class="colorPrimaryAndCenter">{{resource.workTitle}}</div>
-
-<div class="majorGapLeftRight">
-<md-grid-list rowHeight = "350px" [cols]="getColumnOnBasisOfDeviceWidth()">
-    <md-grid-tile (click) = "openWorkDetails(index)" class="individualTab" 
-    *ngFor="let work of resource.workDetailsArray;let index=index" 
-    [style.background]= "resource.colors[index%(getColumnOnBasisOfDeviceWidth()+1)]" [colspan]="1" [rowspan]="1" 
-    (click) = "openWorkDetails(index)" >
-     
-        <div class="workTileStyle individualTab">
-        <img [src]="work.coverurl">
-        <br>
-        
-        {{work.workTitle}}
-        {{work.platform}}
-        </div>
-    </md-grid-tile>
-</md-grid-list>
-</div>
+<md-card (window:resize)="onResize($event)">
+    <div class="smallGapLeftRight">
+    <md-grid-list rowHeight="350px" [cols]="getColumnOnBasisOfDeviceWidth()">
+        <md-grid-tile (click)="openWorkDetails(index)" *ngFor="let work of resource.workDetailsArray;let index=index" [colspan]="1"
+            [rowspan]="1" (click)="openWorkDetails(index)">
+            <md-card style="padding: 0px !important">
+                <div [style.background]="resource.colors[index%(getColumnOnBasisOfDeviceWidth()+1)]" class="workTileStyle individualTab">
+                    <img [src]="work.coverurl">
+                    <br> {{work.workTitle}} {{work.platform}}
+                </div>
+            </md-card>
+        </md-grid-tile>
+    </md-grid-list>
+    </div>
+</md-card>

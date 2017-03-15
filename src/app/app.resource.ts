@@ -2,7 +2,7 @@
 
 export class Resource {
 
-    colors = ["#80CBC4", "#FFCC80", "#FFAB91","#9FA8DA"];
+    colors = ["#80CBC4", "#FFCC80", "#FFAB91","#9FA8DA","#BCAAA4"];
     hamburgIcon = "menu";
     backIcon = "arrow_back";
     personName = "Sparsh Jain";

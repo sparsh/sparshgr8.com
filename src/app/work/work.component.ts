@@ -24,7 +24,7 @@ export class WorkComponent {
 
     getColumnOnBasisOfDeviceWidth() {
 
-    let columns : number = Math.floor(this.innerWidth/400);
+    let columns : number = Math.floor(this.innerWidth/300);
     return columns == 0 ? 1 : columns;
 
 
