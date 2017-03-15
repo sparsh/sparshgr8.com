@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {Resource} from '../app.resource'
 @Component({ 
-  styleUrls:["/../../styles.scss"],
   templateUrl: './about.component.html',
 })
 export class AboutComponent {

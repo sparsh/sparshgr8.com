@@ -28,6 +28,7 @@ var appRoutes = [
         path: 'work',
         component: work_component_1.WorkComponent
     },
+
 ];
 exports.appRoutingProviders = [];
 exports.routing = router_1.RouterModule.forRoot(appRoutes, { useHash: true });

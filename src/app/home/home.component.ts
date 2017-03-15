@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { Resource } from '../app.resource'
 @Component({
-  styleUrls: ["/../../styles.scss"],
   templateUrl: './home.component.html',
 })
 export class HomeComponent {

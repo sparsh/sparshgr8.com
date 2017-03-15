@@ -6,7 +6,6 @@ import { Resource } from '../app.resource'
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { ValidationService } from '../validation.service'
 @Component({ 
-  styleUrls:["/../../styles.scss"],
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
@@ -42,7 +41,7 @@ export class ContactComponent {
 
 
 @Component({ 
-  styleUrls:["/../../styles.scss"],
+  
   selector: 'dialog-result-example-dialog',
   
   templateUrl: './contact.submit.alert.html',

@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router'
 import { Resource } from '../app.resource'
 @Component({ 
-  styleUrls:["/../../styles.scss"],
   selector: 'app-tab',
   
   templateUrl: './tab.component.html',
