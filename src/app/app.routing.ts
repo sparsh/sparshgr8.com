@@ -33,7 +33,7 @@ const appRoutes: Routes = [
         component: WorkComponent
     },
     {
-        path: 'workDetailsInner/:id',
+        path: 'workDetailsInner',
         component: WorkDetailsComponent
     }
 ];
