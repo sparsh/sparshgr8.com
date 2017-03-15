@@ -3,7 +3,7 @@
         <div [formGroup]="contactForm">
 
             <md-input-container class="example-full-width colorPrimaryAndLeftSmallFont">
-                <textarea mdInput formControlName="message" [placeholder]="resource.contactMessagehint"></textarea>
+                <textarea mdInput formControlName="message" [(ngModel)] = "contact.message" [placeholder]="resource.contactMessagehint"></textarea>
                 <div class="errorMessage">
                     <span *ngIf="!contactForm.controls['message'].valid && clicked">  {{resource.validText}} {{resource.contactMessageHeading}} </span>
                 </div>
@@ -11,19 +11,19 @@
 
 
             <md-input-container class="example-full-width colorPrimaryAndLeftSmallFont">
-                <input formControlName="fullName" mdInput [placeholder]="resource.fullName" />
+                <input formControlName="fullName" [(ngModel)] = "contact.fullName" mdInput [placeholder]="resource.fullName" />
                 <div class="errorMessage">
                     <span *ngIf="!contactForm.controls['fullName'].valid && clicked">  {{resource.validText}} {{resource.fullName}} </span>
                 </div>
             </md-input-container>
 
             <md-input-container class="example-full-width colorPrimaryAndLeftSmallFont">
-                <input mdInput formControlName="email" [placeholder]="resource.emailHint" />
+                <input mdInput formControlName="email" [(ngModel)] = "contact.email" [placeholder]="resource.emailHint" />
                 <div class="errorMessage">
                     <span *ngIf="!contactForm.controls['email'].valid && clicked">  {{resource.validText}} {{resource.emailHeading}} </span>
                 </div>
             </md-input-container>
-            <button color="primary" (click)="submitContactValuesToServer()" md-raised-button>Submit</button>
+            <button color="primary" (click)="submitContactValuesToServer(contact)" md-raised-button>Submit</button>
 
         </div>
 
