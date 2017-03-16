@@ -37,8 +37,13 @@ export class AppComponent implements OnInit {
     if (this.icon == this.resource.backIcon) {
       if (this.router.url.indexOf("Inner") == - 1)
         this.router.navigate(["./home"]);
-      else
-        window.history.back();
+
+      else {
+        if (this.router.url.indexOf("workInnerPage"))
+          this.router.navigate(['work']);
+        else
+          window.history.back();
+      }
     }
     else
       sidenav.toggle();
@@ -64,7 +69,7 @@ export class AppComponent implements OnInit {
     sidenav.close();
     this.router.navigate(["./" + path]);
   }
-//Inner describes wether they are inner pages or not.
-// all the pages which are on top of stack having
-// more than one page below are inner
+  //Inner describes wether they are inner pages or not.
+  // all the pages which are on top of stack having
+  // more than one page below are inner
 }

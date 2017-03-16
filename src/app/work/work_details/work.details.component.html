@@ -1,16 +1,5 @@
-<md-grid-list *ngIf="selectedWork" [cols]="getColumnOnBasisOfDeviceWidth()" (window:resize)="onResize($event)">
-    <md-grid-tile>
-        <div>
-        <img style="margin-left: auto;
-	margin-right: auto;
 
-	display: block;height: 600px;
-    width:200px" [src]="selectedWork.screenshotUrl">
-        </div>
-    </md-grid-tile>
-
-    <md-grid-tile>
-        <div class="smallGapLeftRight">
+        <div *ngIf="selectedWork" >
             <div class="colorPrimaryAndLeft">
              {{selectedWork.title}}
             </div>
@@ -18,6 +7,3 @@
              {{selectedWork.description}}
              </div>
         </div>
-           </md-grid-tile>
-
-</md-grid-list>

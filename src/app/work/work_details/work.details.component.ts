@@ -27,6 +27,11 @@ export class WorkDetailsComponent {
     this.appComponent.changeTitleTo(this.selectedWork.title);
 
     this.innerWidth = (window.screen.width);
+
+
+      this.router.events.subscribe((event) => {
+      this.selectedWork = WorkComponent.selectedWork;
+    });
   }
 
 

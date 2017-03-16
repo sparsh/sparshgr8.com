@@ -30,12 +30,12 @@ const appRoutes: Routes = [
         component: ContactComponent
     }, {
         path: 'work',
-        component: WorkComponent
-    },
-    {
-        path: 'workDetailsInner',
+        component: WorkComponent,children:[   {
+        path: 'workDetailsInner/:id',
         component: WorkDetailsComponent
-    }
+    }]
+    },
+ 
 ];
 
 export const appRoutingProviders: any[] = [

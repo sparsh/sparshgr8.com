@@ -1,17 +1,22 @@
-<md-card (window:resize)="onResize($event)">
-    <div class="smallGapLeftRight">
-    <md-grid-list rowHeight="350px" [cols]="getColumnOnBasisOfDeviceWidth()">
-        <md-grid-tile (click)="openWorkDetails(index)" *ngFor="let work of workDetailsArray | async;let index=index" [colspan]="1"
-            [rowspan]="1" (click)="openWorkDetails(work)">
-            <md-card style="padding: 0px !important">
-                <div [style.background]="resource.colors[index%(getColumnOnBasisOfDeviceWidth()+1)]" class="workTileStyle individualTab">
-                    <img class="img-circle" [src]="work.iconUrl">
-                    <br><br> 
-                    {{work.title}}<br>
-                     {{work.platform}}
-                </div>
-            </md-card>
-        </md-grid-tile>
-    </md-grid-list>
+<div (window:resize)="onResize($event)"  style="display: flex;height:100%;flex-direction: row">
+    <div [ngStyle]="{'flex': url.indexOf('Inner')>-1?0.29:1}">
+        <md-grid-list rowHeight="350px" [cols]="getColumnOnBasisOfDeviceWidth()">
+            <md-grid-tile (click)="openWorkDetails(index)" *ngFor="let work of workDetailsArray | async;let index=index" [colspan]="1"
+                [rowspan]="1" (click)="openWorkDetails(work)">
+                <md-card style="padding: 0px !important">
+                    <div [style.background]="resource.colors[index%(getColumnOnBasisOfDeviceWidth()+1)]" class="workTileStyle individualTab">
+                        <img class="img-circle" [src]="work.iconUrl">
+                        <br><br> {{work.title}}
+                        <br> {{work.platform}}
+                    </div>
+                </md-card>
+            </md-grid-tile>
+        </md-grid-list>
     </div>
-</md-card>
+    <div [ngStyle]="{'flex': url.indexOf('Inner')>-1?0.65:0}">
+        <router-outlet></router-outlet>
+    </div>
+
+
+</div>
+

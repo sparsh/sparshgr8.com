@@ -10,23 +10,30 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class WorkComponent {
   workDetailsArray: FirebaseListObservable<any>;
   innerWidth: any;
-  static selectedWork :any;
+  url: any;
+  static selectedWork: any;
   constructor(private resource: Resource,
     af: AngularFire,
     private router: Router) {
     this.workDetailsArray = af.database.list('/workDetailsArray');
-
+    this.url = this.router.url;
     this.innerWidth = (window.screen.width);
+
+    this.router.events.subscribe((event) => {
+      this.url = this.router.url;
+    });
   }
 
   openWorkDetails(work) {
     WorkComponent.selectedWork = work;
-    this.router.navigate(['workDetailsInner']);
+    this.router.navigate(['work/workDetailsInner/' + work.id]);
   }
 
 
   getColumnOnBasisOfDeviceWidth() {
 
+    if(this.url.indexOf("Inner") > -1)
+    return 1;
     let columns: number = Math.floor(this.innerWidth / 300);
     return columns == 0 ? 1 : columns;
 
@@ -36,6 +43,5 @@ export class WorkComponent {
   onResize(event: any) {
     this.innerWidth = event.target.innerWidth;
   }
-
 
 }
