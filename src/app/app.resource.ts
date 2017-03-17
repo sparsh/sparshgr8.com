@@ -6,7 +6,7 @@ export class Resource {
     hamburgIcon = "menu";
     backIcon = "arrow_back";
     personName = "Sparsh Jain";
-
+    ok = "OK!";
     home: "home";
     toolbarIconsArray = [{
         icon: "work",
@@ -40,7 +40,7 @@ export class Resource {
     }
 
 
-
+    pleaseWait = "Please Wait!";
     workTitle = "Recent Works";
     workDetailsArray =
     [
@@ -123,7 +123,7 @@ export class Resource {
     emailHint = "Your Email";
     submit = "Submit";
     error = "Slow connection please try again";
-    success = "Thanks For contacting Sparsh";
+    contactSendSuccess = "Thanks For contacting Sparsh";
     validText = "Please Enter Valid"
 
 

@@ -67,6 +67,13 @@ width: 200px;
   font-size:2.1em;
   color:mat-color($primary) !important;
 }
+.colorPrimaryAndCenterSmall{
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  margin: 0 auto;
+  font-size:1.5em;
+  color:mat-color($primary) !important;
+}
 .colorPrimaryAndLeft{
   padding: 10px 0px 10px 0px;
   text-align: left;

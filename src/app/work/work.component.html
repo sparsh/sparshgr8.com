@@ -1,7 +1,7 @@
 <div class="smallGapLeftRight" (window:resize)="onResize($event)"  style="display: flex;height:100%;flex-direction: row">
     <div style="overflow: auto;height: 100%" [ngStyle]="{'flex': url.indexOf('Inner')>-1?innerWidth>700?0.29:0:1}">
         <md-grid-list rowHeight="350px" [cols]="getColumnOnBasisOfDeviceWidth()">
-            <md-grid-tile (click)="openWorkDetails(index)" *ngFor="let work of workDetailsArray | async;let index=index" [colspan]="1"
+            <md-grid-tile (click)="openWorkDetails(index)" *ngFor="let work of workDetailsArray;let index=index" [colspan]="1"
                 [rowspan]="1" (click)="openWorkDetails(work)">
                 <md-card style="padding: 0px !important">
                     <div [style.background]="resource.colors[index%(getColumnOnBasisOfDeviceWidth()+1)]" class="workTileStyle individualTab">
@@ -15,7 +15,7 @@
     </div>
 
 
-    <div class="smallGapLeftRight" [ngStyle]="{'flex': url.indexOf('Inner')>-1?innerWidth>700?0.70:1:0}" style="margin-top: auto;margin-bottom: auto">
+    <div class="smallGapLeftRight" [ngStyle]="{'flex': url.indexOf('Inner')>-1?innerWidth>700?0.70:1:0}" style=" margin-top: auto; margin-bottom: auto">
         <router-outlet></router-outlet>
     </div>
 

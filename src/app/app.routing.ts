@@ -7,7 +7,7 @@ import { AboutComponent } from './about/about.component'
 import { BlogComponent } from './blog/blog.component'
 import { ContactComponent } from './contact/contact.component'
 import { WorkComponent } from './work/work.component'
-import { WorkDetailsComponent } from './work/work_details/work.details.component'
+import { WorkDetailsComponent } from './work/work.details/work.details.component'
 const appRoutes: Routes = [
 
     {
