@@ -42,56 +42,7 @@ export class Resource {
 
     pleaseWait = "Please Wait!";
     workTitle = "Recent Works";
-    workDetailsArray =
-    [
-        {
-            workTitle: "Health Quest",
-            workDescription: "It is a health related application",
-            coverurl: "assets/sparsh_circular_black.png",
-            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
-            platform: "Android"
-
-        },
-        {
-            workTitle: "Health Quest",
-            workDescription: "It is a health related application",
-            coverurl: "assets/sparsh_circular_black.png",
-            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
-            platform: "Android"
-        },
-        {
-            workTitle: "Health Quest",
-            workDescription: "It is a health related application",
-            coverurl: "assets/sparsh_circular_black.png",
-            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
-            platform: "Android"
-
-        },
-        {
-            workTitle: "Health Quest",
-            workDescription: "It is a health related application",
-            coverurl: "assets/sparsh_circular_black.png",
-            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
-            platform: "Android"
-
-        },
-        {
-            workTitle: "Health Quest",
-            workDescription: "It is a health related application",
-            coverurl: "assets/sparsh_circular_black.png",
-            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
-            platform: "Android"
-
-        },   {
-            workTitle: "Health Quest",
-            workDescription: "It is a health related application",
-            coverurl: "assets/sparsh_circular_black.png",
-            screenshotArray: ["assets/sparsh_circular_black.png", "assets/sparsh_circular_black.png"],
-            platform: "Android"
-
-        }
-
-    ]
+   
 
     aboutTitle = "About Me";
     somethingAboutMe = "My name is sparsh etc.";

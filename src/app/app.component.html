@@ -4,36 +4,38 @@
 
             <md-list class="menu-nav">
                   <md-list-item>
-                        <img class = "imageFullWidth" src="assets/sparsh_circular_black.png">
+                        <img class="imageFullWidth" src="assets/sparsh_circular_black.png">
                   </md-list-item>
 
-                       <md-divider class="individualTab" ></md-divider>
+                  <md-divider class="individualTab"></md-divider>
 
                   <div (click)="goToRouteLink(r.routeLink,sidenav)" *ngFor="let r of resource.navDrawerIcons">
                         <div class="individualTab">
                               <md-icon class="md-24 mdIconCenterClass">{{r.icon}}</md-icon>
                               <br>{{r.toolbarTitle.trim()}}
                         </div>
-                       <md-divider class="individualTab" ></md-divider>
+                        <md-divider class="individualTab"></md-divider>
                   </div>
             </md-list>
       </md-sidenav>
-      <md-toolbar color="primary">
+      <md-toolbar style="padding:1%" color="primary">
             <md-icon (click)="closeNavDrawerOrGoBack(sidenav)" class="md-24">{{icon}}</md-icon>
             <span class="toolbar-title-style">{{toolbarTitle}}</span>
 
             <!-- This fills the remaining space of the current row -->
 
             <span class="example-fill-remaining-space"></span>
-  
-                  <md-icon *ngFor="let r of resource.toolbarIconsArray" (mouseleave)='changeTitleTo()' (click)="goToRouteLink(r.routeLink,sidenav)"
-                        (mouseover)='changeTitleTo(r.toolbarTitle)' class="md-48 toolbar-icon-style">{{r.icon}}</md-icon>
-    
+            <div class="toolbar-icon-style cursor" *ngFor="let r of resource.toolbarIconsArray" (mouseleave)='changeTitleTo()' (click)="goToRouteLink(r.routeLink,sidenav)"
+                  (mouseover)='changeTitleTo(r.toolbarTitle)' style="display: flex;flex-direction: column;">
+                  <md-icon style="flex: 0.8" class="md-48">{{r.icon}}</md-icon>
+                  <div class="whiteAndSmall" style="flex:0.2">{{r.toolbarTitle}}</div>
+
+            </div>
       </md-toolbar>
 
       <div class="light-background" style="height:100%;overflow-y:auto">
 
-            
+
             <router-outlet></router-outlet>
       </div>
 

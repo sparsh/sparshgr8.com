@@ -10,7 +10,7 @@ import { AlertDialog } from '../healper/alert.dialog/alert.dialog.component';
   templateUrl: './work.component.html',
 })
 export class WorkComponent {
-  workDetailsArray: FirebaseListObservable<any>[];
+  workDetailsArray: FirebaseListObservable<any>[] = [];
   innerWidth: any;
   url: any;
   static selectedWork: any;
@@ -22,8 +22,8 @@ export class WorkComponent {
     let dialogRef = dialog.open(ProgressDialog);
     af.database.list('/workDetailsArray').subscribe(
       data => {
-        this.workDetailsArray = data;
-
+        if (data)
+          this.workDetailsArray = data;
         dialogRef.close();
       },
       error => {

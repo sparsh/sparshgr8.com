@@ -9,12 +9,14 @@ md-icon:hover {cursor: pointer;}
 }
 
 .toolbar-title-style{
+  text-overflow: ellipsis; 
   padding-left: 15px
 }
 
 .toolbar-icon-style{
   
-  padding-left: 8%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .light-background{
@@ -73,6 +75,14 @@ width: 200px;
   margin: 0 auto;
   font-size:1.5em;
   color:mat-color($primary) !important;
+}
+.whiteAndSmall
+{
+   padding: 10px 0px 10px 0px;
+  text-align: center;
+  margin: 0 auto;
+  font-size:0.5em;
+  color:white !important;
 }
 .colorPrimaryAndLeft{
   padding: 10px 0px 10px 0px;
