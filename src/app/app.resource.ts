@@ -45,7 +45,13 @@ export class Resource {
    
 
     aboutTitle = "About Me";
-    somethingAboutMe = "My name is sparsh etc.";
+    somethingAboutMe = "Hello! My Name is Sparsh Jain! I live In New Delhi, India. I am a Software Developer who"
+    +" enjoyes developing web and mobile application. Till Now I have developed 6 Native Android Application,"
+    +" 2 Applications In Angualr 2 and 2 application in hybrid mobile technology."
+    +" I have developed application in different categories, starting from discounting application,"
+    +" e-commerce, Health related application to professional Banking Application "
+    +" Its been 3 years since I have developed and sucessfully deployed My first application on windows mobile store."
+    +" I have been awarded by Microsoft India App Review Board for my contribution on Improving the quality of application stored in Windows Store. ";
     experience = "Experience";
     experienceDetailsArray = [{ name: "Benepik", post: "Sample Design" }, { name: "Benepik", post: "Sample Design" }, { name: "Benepik", post: "Sample Design" }]
     downLoadResume = "Download Resume";

@@ -5,10 +5,15 @@ import {Resource} from '../app.resource'
 })
 export class AboutComponent {
 
-constructor(private resource:Resource)
-{
-  
-}
+  innerWidth: any;
+  constructor(private resource: Resource) {
+    this.innerWidth = (window.screen.width);
+  }
+
+
+  onResize(event: any) {
+    this.innerWidth = event.target.innerWidth;
+  }
 
 openLink(link:string)
 {
