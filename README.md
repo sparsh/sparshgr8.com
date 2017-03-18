@@ -2,12 +2,12 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
 
-## For backed and hosting Ihave used Firebase
+## For backed and hosting I have used Firebase
 
 This project used Anmgular Fire 2 github repo for all the backend and hosting related activities
 
 ## Deployed At
-This website is sucessfully deployed at `sparshgr8-eb16c.firebaseapp.com`
+This web Application is sucessfully deployed at [Sparsh Jain Portfolio](sparshgr8-eb16c.firebaseapp.com)
 
 
 
