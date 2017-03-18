@@ -87,8 +87,7 @@ export class Resource {
     submit = "Submit";
     error = "Slow connection please try again";
     contactSendSuccess = "Thanks For contacting Sparsh";
-    validText = "Please Enter Valid"
-    platforms = "Platforms - "
+    validText = "Please Enter Valid";
 
 
 
