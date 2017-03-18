@@ -56,14 +56,13 @@ export class AppComponent implements OnInit {
       if (this.toolbarTitle != title) {
         this.previoudTitle = this.toolbarTitle;
         if (this.router.url.indexOf("Inner") == -1)
-          this.toolbarTitle = "Go to " + title;
+          this.toolbarTitle = title;
         else
           this.toolbarTitle = title;
       }
     }
     else
       this.toolbarTitle = this.previoudTitle;
-
   }
 
   goToRouteLink(path: string, sidenav: any) {
