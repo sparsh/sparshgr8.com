@@ -9,6 +9,7 @@ export class AppComponent implements OnInit {
 
   toolbarTitle: string;
   previoudTitle: string;
+  url = "";
   icon: string;
   constructor(private router: Router,
     private resource: Resource) {
@@ -18,10 +19,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
-      let url = this.router.url;
-      if (url.indexOf("Inner") == -1)
-        this.toolbarTitle = this.previoudTitle = url.substring(1, 2).toUpperCase() + url.substring(2);
-      if (url.indexOf("home") == -1) {
+       this.url = this.router.url;
+      if (this.url.indexOf("Inner") == -1)
+        this.toolbarTitle = this.previoudTitle = this.url.substring(1, 2).toUpperCase() + this.url.substring(2);
+      if (this.url.indexOf("home") == -1) {
         this.icon = this.resource.backIcon;
       }
       else {

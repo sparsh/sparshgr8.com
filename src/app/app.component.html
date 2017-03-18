@@ -27,8 +27,8 @@
             <span class="example-fill-remaining-space"></span>
             <div class="toolbar-icon-style cursor" *ngFor="let r of resource.toolbarIconsArray" (mouseleave)='changeTitleTo()' (click)="goToRouteLink(r.routeLink,sidenav)"
                   (mouseover)='changeTitleTo(r.toolbarTitle)' style="display: flex;flex-direction: column;">
-                  <md-icon style="flex: 0.8" class="md-48">{{r.icon}}</md-icon>
-                  <div class="whiteAndSmall" style="flex:0.2">{{r.toolbarTitle}}</div>
+                  <md-icon *ngIf="url.indexOf('Inner') == -1" style="flex: 0.8" class="md-48">{{r.icon}}</md-icon>
+                  <div  *ngIf="url.indexOf('Inner') == -1" class="whiteAndSmall" style="flex:0.2">{{r.toolbarTitle}}</div>
 
             </div>
       </md-toolbar>
