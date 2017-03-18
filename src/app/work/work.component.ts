@@ -41,7 +41,7 @@ export class WorkComponent {
 
   openWorkDetails(work) {
     WorkComponent.selectedWork = work;
-    this.router.navigate(['work/workDetailsInner/' + work.id]);
+    this.router.navigate(['work/workDetailsInner/' + work.$key]);
   }
 
 
