@@ -1,10 +1,10 @@
 <md-card   (window:resize)="onResize($event)" class="cardMargin">
         <img *ngIf="innerWidth>700" class="imageFullWidth" src="assets/code_cover.png" />
         <img *ngIf="innerWidth<700" class="imageFullWidth" src="assets/code_cover_small.png" />
-        
+        <div class="majorGapLeftRight">
         <div class="colorPrimaryAndCenter">{{resource.aboutTitle}}</div>
 
-        <div class="colorSecondryAndLeft">{{resource.somethingAboutMe}}</div>
+        <div class="colorSecondryAndLeft" [innerHtml] = "resource.somethingAboutMe"></div>
 
         <div class="colorPrimaryAndLeft">{{resource.experience}}</div>
 
@@ -26,9 +26,12 @@
 
         <div style="margin-top: 10px" class="colorPrimaryAndLeft">{{resource.aboutWebSite}}</div>
 
-        <div class="colorSecondryAndLeft">{{resource.aboutWebSiteDescription}}</div>
+        <div class="colorSecondryAndLeft" [innerHtml] = "resource.aboutWebSiteDescription"></div>
+
+        </div>
 
 
+</md-card>
 
 
     <md-toolbar color="primary">
@@ -40,5 +43,4 @@
         <span class="example-fill-remaining-space"></span>
 
 
-    </md-toolbar>
-</md-card>
+    </md-toolbar>   

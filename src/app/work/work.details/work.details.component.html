@@ -1,9 +1,6 @@
-
-        <div *ngIf="selectedWork" >
-            <div class="colorPrimaryAndLeft">
-             {{selectedWork.title}}
-            </div>
-             <div class="colorSecondryAndLeft">
-             {{selectedWork.description}}
-             </div>
+<div *ngIf="selectedWork">
+        <div class="colorPrimaryAndLeft" [innerHtml]="selectedWork.title">
         </div>
+        <div class="colorSecondryAndLeft" [innerHtml]="selectedWork.description">
+        </div>
+</div>
