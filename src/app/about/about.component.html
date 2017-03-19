@@ -8,13 +8,13 @@
 
         <div class="colorPrimaryAndLeft">{{resource.experience}}</div>
 
-        <md-grid-list rowHeight="50px" cols="1">
+        <md-grid-list rowHeight="60px" cols="1">
             <md-grid-tile *ngFor="let experience of resource.experienceDetailsArray;let index=index" [style.background]="resource.colors[index%3]"
                 [colspan]="1" [rowspan]="1">
-                <br>
-                <div class="colorSecondryAndLeft">{{experience.name}}</div>
-                <div class="colorSecondryAndLeft">{{experience.post}}</div>
-
+                <div style="display: flex;text-align: center;height:100%;width: 100%;flex-direction: row">
+                <div style="flex:0.5" class="colorSecondryAndCenter">{{experience.name}}</div>
+                <div style="flex:0.5" class="colorSecondryAndCenter">{{experience.post}}</div>
+                </div>
             </md-grid-tile>
         </md-grid-list>
 
