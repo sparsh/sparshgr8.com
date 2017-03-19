@@ -1,7 +1,7 @@
 <md-card   (window:resize)="onResize($event)" class="cardMargin">
         <img *ngIf="innerWidth>700" class="imageFullWidth" src="assets/code_cover.png" />
         <img *ngIf="innerWidth<700" class="imageFullWidth" src="assets/code_cover_small.png" />
-        <div class="majorGapLeftRight">
+        <div class="smallGapLeftRight">
         <div class="colorPrimaryAndCenter">{{resource.aboutTitle}}</div>
 
         <div class="colorSecondryAndLeft" [innerHtml] = "resource.somethingAboutMe"></div>

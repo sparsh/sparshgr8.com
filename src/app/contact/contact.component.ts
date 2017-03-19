@@ -30,12 +30,14 @@ export class ContactComponent {
   }
 
   submitContactValuesToServer(contact) {
+   
+    contact.time = +new Date();
     this.clicked = true;
     if (this.contactForm.valid) {
 
       this.contactRefrence.push(contact);
       let dialogRef = this.dialog.open(AlertDialog);
-      
+
       if (navigator.onLine) {
         dialogRef.componentInstance['message'] = this.resource.contactSendSuccess;
         this.contactForm.reset();

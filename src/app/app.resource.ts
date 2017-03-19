@@ -55,7 +55,7 @@ export class Resource {
     + " I have done my bachelor degree in Computer Science and Engineering from HMRITM in 2015, an Institute Affiliated to GGSIP University, Delhi. ";
 
     experience = "Experience";
-    experienceDetailsArray = [{ name: "Benepik", post: "Project Manager" }, { name: "Appsquadz", post: "Software Developer" }]
+    experienceDetailsArray = [{ name: "My Rewards Services", post: "Project Manager" }, { name: "Appsquadz", post: "Software Developer" }]
     downLoadResume = "Download Resume";
     aboutWebSite = "About This WebSite";
     aboutWebSiteDescription = "This website was built responsively using Angular 2, HTML5, CSS.For backed and hosting I am using Firebase. Fonts are served through Google Fonts. <br>"
