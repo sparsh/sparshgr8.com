@@ -8,7 +8,7 @@ import { Resource } from './app.resource'
 export class AppComponent implements OnInit {
 
   toolbarTitle: string;
-  previoudTitle: string;
+  previousTitle: string;
   url = "";
   icon: string;
   constructor(private router: Router,
@@ -19,17 +19,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
-       this.url = this.router.url;
-      if (this.url.indexOf("Inner") == -1)
-        this.toolbarTitle = this.previoudTitle = this.url.substring(1, 2).toUpperCase() + this.url.substring(2);
-      if (this.url.indexOf("home") == -1) {
-        this.icon = this.resource.backIcon;
-      }
-      else {
-        this.icon = this.resource.hamburgIcon;
-        this.previoudTitle = this.toolbarTitle = this.resource.personName;
-      }
-
+      this.url = this.router.url;
+      this.changeTitleTo(this.url);
     });
   }
 
@@ -52,17 +43,22 @@ export class AppComponent implements OnInit {
   }
 
   changeTitleTo(title: string) {
-    if (title != null) {
-      if (this.toolbarTitle != title) {
-        this.previoudTitle = this.toolbarTitle;
-        if (this.router.url.indexOf("Inner") == -1)
-          this.toolbarTitle = title;
-        else
-          this.toolbarTitle = title;
-      }
+
+    if (this.url.indexOf("Inner") == -1)
+      this.toolbarTitle = this.url.substring(1, 2).toUpperCase() + this.url.substring(2);
+    else if (this.url.indexOf("Inner") > -1)
+      this.toolbarTitle = title;
+
+
+
+    if (this.url.indexOf("home") == -1)
+      this.icon = this.resource.backIcon;
+    else if (this.url.indexOf("home") > -1) {
+    this.toolbarTitle = this.resource.personName;
+      this.icon = this.resource.hamburgIcon;
     }
-    else
-      this.toolbarTitle = this.previoudTitle;
+
+
   }
 
   goToRouteLink(path: string, sidenav: any) {
