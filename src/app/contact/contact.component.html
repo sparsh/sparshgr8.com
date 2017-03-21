@@ -1,9 +1,17 @@
-<md-card class="cardMargin">
+<md-card style="height:100%;overflow: auto" class="cardMargin" >
     <md-card-content>
-        <div [formGroup]="contactForm">
+        <div class="colorPrimaryAndLeft">{{resource.getInTouch}}</div>
+        <div class="colorSecondryAndLeft">
+            {{resource.fillFormMessage}}
+        </div>
+        <md-checkbox color="primary" [(ngModel)]="getInTouch">{{resource.getInTouch}}</md-checkbox>
+        <br>
+        <br>
 
+        <div *ngIf="getInTouch" [formGroup]="contactForm">
+            <md-divider></md-divider>
             <md-input-container class="example-full-width colorPrimaryAndLeftSmallFont">
-                <textarea mdInput formControlName="message" [(ngModel)] = "contact.message" [placeholder]="resource.contactMessagehint"></textarea>
+                <textarea mdInput formControlName="message" [(ngModel)]="contact.message" [placeholder]="resource.contactMessagehint"></textarea>
                 <div class="errorMessage">
                     <span *ngIf="!contactForm.controls['message'].valid && clicked">  {{resource.validText}} {{resource.contactMessageHeading}} </span>
                 </div>
@@ -11,14 +19,14 @@
 
 
             <md-input-container class="example-full-width colorPrimaryAndLeftSmallFont">
-                <input formControlName="fullName" [(ngModel)] = "contact.fullName" mdInput [placeholder]="resource.fullName" />
+                <input formControlName="fullName" [(ngModel)]="contact.fullName" mdInput [placeholder]="resource.fullName" />
                 <div class="errorMessage">
                     <span *ngIf="!contactForm.controls['fullName'].valid && clicked">  {{resource.validText}} {{resource.fullName}} </span>
                 </div>
             </md-input-container>
 
             <md-input-container class="example-full-width colorPrimaryAndLeftSmallFont">
-                <input mdInput formControlName="email" [(ngModel)] = "contact.email" [placeholder]="resource.emailHint" />
+                <input mdInput formControlName="email" [(ngModel)]="contact.email" [placeholder]="resource.emailHint" />
                 <div class="errorMessage">
                     <span *ngIf="!contactForm.controls['email'].valid && clicked">  {{resource.validText}} {{resource.emailHeading}} </span>
                 </div>
@@ -27,6 +35,29 @@
 
         </div>
 
-        </md-card-content>
+        <br>
+        <br>
+        <md-divider></md-divider>
+        <div class="colorSecondryAndLeft">
+          {{resource.emailContactMessage}}
+        </div>
+        <div class="colorPrimaryAndLeft">{{resource.myEmail}}</div>
+        <div class="colorSecondryAndLeft">
+            <md-divider></md-divider>
+            {{resource.contactViaSocialMedia}}
+
+        </div>
+        <div style="display: flex;height:100%;flex-direction: row">
+
+            <span class="example-fill-remaining-space"></span>
+            <div class="toolbar-icon-style cursor" *ngFor="let social of resource.aboutSocialDetailsArray">
+                <img class="contactImageBackground" (click)="openLink(social.link)" [src]="social.path">
+            </div>
+            <span class="example-fill-remaining-space"></span>
+          
+        </div>
+          <br>
+        <md-divider></md-divider>
+    </md-card-content>
 
 </md-card>

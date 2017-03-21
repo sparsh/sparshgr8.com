@@ -83,6 +83,16 @@ width: 200px;
   font-size:0.5em;
   color:white !important;
 }
+.contactImageBackground{
+  background: mat-color($primary)
+}
+.whiteAndMedium
+{
+  text-align: center;
+  margin: 0 auto;
+  font-size:0.7em;
+  color:white !important;
+}
 .colorPrimaryAndLeft{
   padding: 10px 0px 10px 0px;
   text-align: left;

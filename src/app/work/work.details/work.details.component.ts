@@ -4,6 +4,8 @@ import { WorkComponent } from "../work.component"
 import { AppComponent } from "../../app.component"
 import { Router } from "@angular/router"
 import { WorkDetailModel } from "./work.details.model"
+
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 @Component({
   templateUrl: './work.details.component.html',
   providers: [WorkDetailModel]
@@ -13,6 +15,7 @@ export class WorkDetailsComponent {
 
   innerWidth: any;
   constructor(private resource: Resource,
+    af: AngularFire,
     private router: Router,
     private selectedWork: WorkDetailModel,
     private appComponent: AppComponent) {
@@ -20,7 +23,7 @@ export class WorkDetailsComponent {
 
     this.selectedWork = WorkComponent.selectedWork;
     if (this.selectedWork == null) {
-      this.router.navigate(["home"]);
+      this.router.navigate(["work"]);
       return;
     }
     this.appComponent.changeTitleTo(this.selectedWork.title);

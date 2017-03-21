@@ -88,8 +88,12 @@ export class Resource {
     error = "Slow connection please try again";
     contactSendSuccess = "Thanks For contacting Sparsh";
     validText = "Please Enter Valid";
+    getInTouch = "Get in Touch";
 
-
-
+    fillFormMessage = "The easiest way to get in touch is to fill the short form below and click submit, I will recieve a push notificaiton Immediately on my admin"
+    +" andorid app and will reply to you ASAP on the Email filled in the below input. ";
+    emailContactMessage = "You can also contact me on my email, I ususally reply within 2-3 hours.";
+    myEmail = "Sparshgr8@yahoo.com";
+    contactViaSocialMedia = "Or you can also try to reach me on the social media and other platforms."
 
 }

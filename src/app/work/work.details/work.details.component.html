@@ -1,6 +1,8 @@
 <div *ngIf="selectedWork">
-        <div class="colorPrimaryAndLeft" [innerHtml]="selectedWork.title">
-        </div>
-        <div class="colorSecondryAndLeft" [innerHtml]="selectedWork.description">
-        </div>
+        <md-card style="margin-top: 5px;margin-bottom: 5px">
+                <div class="colorPrimaryAndLeft" [innerHtml]="selectedWork.title">
+                </div>
+                <div class="colorSecondryAndLeft" [innerHtml]="selectedWork.description">
+                </div>
+        </md-card>
 </div>

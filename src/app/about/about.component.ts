@@ -17,9 +17,6 @@ export class AboutComponent {
 
 openLink(link:string)
 {
-  console.log("link is " + link);
-
-
   var win = window.open(link, '_blank');
   win.focus();
 }

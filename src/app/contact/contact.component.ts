@@ -13,6 +13,7 @@ import { ValidationService } from '../validation.service'
 export class ContactComponent {
   clicked: boolean = false;
   selectedOption: string;
+  getInTouch :boolean = true;
   contactRefrence: FirebaseListObservable<any[]>;
   contact: any = {};
   contactForm = new FormGroup({
@@ -30,7 +31,7 @@ export class ContactComponent {
   }
 
   submitContactValuesToServer(contact) {
-   
+
     contact.time = +new Date();
     this.clicked = true;
     if (this.contactForm.valid) {
@@ -49,6 +50,14 @@ export class ContactComponent {
       this.clicked = false;
     }
   }
+
+
+
+  openLink(link: string) {
+    var win = window.open(link, '_blank');
+    win.focus();
+  }
+
 
 }
 
