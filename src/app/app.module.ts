@@ -23,11 +23,11 @@ import {
 
 export const firebaseConfig = {
 
-  apiKey: "AIzaSyBhmegPLFwFn_99DQmi0yN5d45Emr503B8",
-  authDomain: "sparshgr8-eb16c.firebaseapp.com",
-  databaseURL: "https://sparshgr8-eb16c.firebaseio.com",
-  storageBucket: "sparshgr8-eb16c.appspot.com",
-  messagingSenderId: "356240296697"
+  apiKey: '<your-key>',
+  authDomain: '<your-project-authdomain>',
+  databaseURL: '<your-database-URL>',
+  storageBucket: '<your-storage-bucket>',
+  messagingSenderId: '<your-messaging-sender-id>'
 
 };
 
