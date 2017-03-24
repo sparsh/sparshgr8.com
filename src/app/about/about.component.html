@@ -19,7 +19,7 @@
         </md-grid-list>
 
         <md-chip-list class="mat-chip-list-stacked">
-            <md-chip class="paddingMedium cursor" selected="true" color="primary">
+            <md-chip (click) = "downloadResume()" class="paddingMedium cursor" selected="true" color="primary">
                 {{resource.downLoadResume}}
             </md-chip>
         </md-chip-list>

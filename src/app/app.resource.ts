@@ -58,11 +58,18 @@ export class Resource {
     experienceDetailsArray = [{ name: "My Rewards Services", post: "Project Manager" }, { name: "Appsquadz", post: "Software Developer" }]
     downLoadResume = "Download Resume";
     aboutWebSite = "About This WebSite";
-    aboutWebSiteDescription = "This website was built responsively using Angular 2, HTML5, CSS.For backed and hosting I am using Firebase. Fonts are served through Google Fonts. <br>"
-    + " For learning purpose I have uploaded the source code of the project on github, the source can be found at<a target='_blank' href='https://github.com/sparsh/sparshgr8.com'> this</a> link."
-    + " For uploading and updating the data on this website I have made an <b>Admin Android Application</b>, which I use to edit the work details.<br>"
-    + " I will be adding more fetures like push notification on contact form submission in near future, For push notitifcation Firebase will be used as it is fast and easy to use, Firebase also provides a console for getting details of earlier push notitfications."
-    + "<br> In next version of this website I am planning to add a blogger tab, In which I can post Stories about latest technologies, I am also planning to add video tutorials on this website in near future.";
+    aboutWebSiteDescription = "This website was built responsively using Angular 2, HTML5, CSS. For backed and hosting I am using Firebase. Fonts are served through Google Fonts."
+    + " For learning purpose I have uploaded the source code of this project on github, the source can be found at <a target='_blank' href='https://github.com/sparsh/sparshgr8.com'>this</a> link. <br>"
+    + " I also developed an admin panel of this website in <b>Android</b>, The reson why I choose Mobile Application as an Admin Panel is that it is quite easy as well as handy to"
+    + " create and update the information from a mobile phone, For instance If I recieve any advice from my colleague about the language or the Image, I immediately pull"
+    + " out my cell phone and make the change, No need for noting it down somewhere and apply changes once I get my laptop. Some of the feature of the android app are :- <br>"
+    + "<br> 1) Add a new work to show in Work Tab."
+    + "<br> 2) Update the title or description of existing work"
+    + "<br> 3) See the details of all the Contact form submissions."
+    + "<br> 4) Reply to person who submits the contact form. <br><br>"
+    + " Whenever the user Submits the contact form (In the contact TAB), I Immediately recieve a Push notificaiton, For push notitifcation, I am again using Firebase, Firebase provides a nice console for managing the database, notitfication and more."
+    + "<br> In next version of this website I am planning to add a blogger tab, In which I can post Stories about latest technologies, I am also planning to add video tutorials on this website in near future."
+    + " As the web app grows the admin panel andorid app will also grow with it.";
     aboutSocialDetailsArray = [{ path: "assets/github.png", link: "http://www.github.com/sparsh" },
     { path: "assets/so.png", link: "http://stackoverflow.com/users/3397757/sparsh" },
     { path: "assets/facebook.png", link: "https://www.fb.com/sparshj" },
