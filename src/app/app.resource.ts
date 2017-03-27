@@ -60,7 +60,7 @@ export class Resource {
     aboutWebSite = "About This WebSite";
     aboutWebSiteDescription = "This website was built responsively using Angular 2, HTML5, CSS. For backed and hosting I am using Firebase. Fonts are served through Google Fonts."
     + " For learning purpose I have uploaded the source code of this project on github, the source can be found at <a target='_blank' href='https://github.com/sparsh/sparshgr8.com'>this</a> link. <br>"
-    + " I also developed an admin panel of this website in <b>Android</b>, The reson why I choose Mobile Application as an Admin Panel is that it is quite easy as well as handy to"
+    + " I also developed an admin panel of this website in <b>Android</b>, The reason why I chose Mobile Application as an Admin Panel is that, It is quite easy as well as handy to"
     + " create and update the information from a mobile phone, For instance If I recieve any advice from my colleague about the language or the Image, I immediately pull"
     + " out my cell phone and make the change, No need for noting it down somewhere and apply changes once I get my laptop. Some of the feature of the android app are :- <br>"
     + "<br> 1) Add a new work to show in Work Tab."
