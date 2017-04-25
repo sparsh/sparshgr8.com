@@ -1,4 +1,4 @@
-<md-card   (window:resize)="onResize($event)" class="cardMargin">
+<div   (window:resize)="onResize($event)">
         <img *ngIf="innerWidth>700" class="imageFullWidth" src="assets/code_cover.png" />
         <img *ngIf="innerWidth<=700" class="imageFullWidth" src="assets/code_cover_small.png" />
         <div class="smallGapLeftRight">
@@ -31,16 +31,5 @@
         </div>
 
 
-</md-card>
-
-
-    <md-toolbar color="primary">
-
-        <span class="example-fill-remaining-space"></span>
-        <div class="toolbar-icon-style cursor" *ngFor="let social of resource.aboutSocialDetailsArray">
-            <img (click)="openLink(social.link)" [src]="social.path">
-        </div>
-        <span class="example-fill-remaining-space"></span>
-
-
-    </md-toolbar>   
+</div>
+  

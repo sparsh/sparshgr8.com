@@ -1,4 +1,4 @@
-<md-sidenav-container class="example-sidenav-fab-container" fullscreen>
+<md-sidenav-container style="width:100%;overflow-y:hidden" class="example-sidenav-fab-container" fullscreen>
 
       <md-sidenav class="sidenav" #sidenav mode="side">
 
@@ -27,21 +27,28 @@
             <span class="example-fill-remaining-space"></span>
             <div class="toolbar-icon-style cursor" *ngFor="let r of resource.toolbarIconsArray" (mouseleave)='changeTitleTo()' (click)="goToRouteLink(r.routeLink,sidenav)"
                   (mouseover)='changeTitleTo(r.toolbarTitle)' style="display: flex;flex-direction: column;">
-                  <md-icon *ngIf="url.indexOf('Inner') == -1" style="flex: 0.8" class="md-48">{{r.icon}}</md-icon>
-                  <div  *ngIf="url.indexOf('Inner') == -1" class="whiteAndSmall" style="flex:0.2">{{r.toolbarTitle}}</div>
+                  <md-icon *ngIf="url.indexOf('Inner') == -1" style="flex: 0.5" class="md-48">{{r.icon}}</md-icon>
+                  <div *ngIf="url.indexOf('Inner') == -1" class="whiteAndSmall" style="flex:0.5">{{r.toolbarTitle}}</div>
 
             </div>
       </md-toolbar>
 
-      <div class="light-background" style="height:100%;overflow-y:auto">
-
-
-            <router-outlet></router-outlet>
+      <div class="light-background" style="width:100%;overflow-y:auto;">
+            <md-card  class="cardMargin">
+                  <router-outlet></router-outlet>
+            </md-card>
       </div>
 
+      <md-toolbar color="primary">
+            <md-toolbar-row>
+                  <span class="example-fill-remaining-space"></span>
+                  <div class="toolbar-icon-style cursor" *ngFor="let social of resource.aboutSocialDetailsArray">
+                        <img (click)="openLink(social.link)" [src]="social.path">
+                  </div>
+                  <span class="example-fill-remaining-space"></span>
+            </md-toolbar-row>
+            <div class="whiteAndMedium">Developed By - Sparsh Jain<br>© 2017 Sparsh Jain. All rights reserved.</div>
 
-          <md-toolbar style="padding:1%" color="primary">
-                <div class="whiteAndMedium">Developed By - Sparsh Jain<br>© 2017 Sparsh Jain. All rights reserved.</div>
-             </md-toolbar>
+      </md-toolbar>
 
 </md-sidenav-container>
