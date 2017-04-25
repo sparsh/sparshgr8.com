@@ -46,7 +46,7 @@ export class Resource {
 
     aboutTitle = "About Me";
     somethingAboutMe = "Hello! My Name is Sparsh Jain! I live In New Delhi, India. I am a Software Developer who"
-    + " enjoyes developing web and mobile application. Till Now I have developed <b>6 Native Android Application</b>,"
+    + " enjoyes developing web and mobile application. Till Now I have developed more than <b>8 Native Android Application</b>,"
     + "<b> 2 Applications In Angualr 2 </b>and <b>2 application in hybrid mobile technology</b>.<br>"
     + " I have developed application in different categories, starting from <b>discounting application,"
     + " e-commerce, Health related application to professional Banking Application</b> "
