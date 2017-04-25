@@ -1,5 +1,5 @@
 
-<div  class="smallGapLeftRight" (window:resize)="onResize($event)"  style="display: flex;flex-direction: row;background: white">
+<div  class="smallGapLeftRight" (window:resize)="onResize($event)"  style="display: flex;flex-direction: row;height:100%">
     <div [ngStyle]="{'flex': url.indexOf('Inner')>-1?innerWidth>700?0.29:0:1}">
         <md-grid-list rowHeight="350px" [cols]="getColumnOnBasisOfDeviceWidth()">
             <md-grid-tile (click)="openWorkDetails(index)" *ngFor="let work of workDetailsArray;let index=index" [colspan]="1"

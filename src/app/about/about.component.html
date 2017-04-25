@@ -1,10 +1,10 @@
-<div   (window:resize)="onResize($event)">
-        <img *ngIf="innerWidth>700" class="imageFullWidth" src="assets/code_cover.png" />
-        <img *ngIf="innerWidth<=700" class="imageFullWidth" src="assets/code_cover_small.png" />
-        <div class="smallGapLeftRight">
+<md-card class="cardMargin" (window:resize)="onResize($event)">
+    <img *ngIf="innerWidth>700" class="imageFullWidth" src="assets/code_cover.png" />
+    <img *ngIf="innerWidth<=700" class="imageFullWidth" src="assets/code_cover_small.png" />
+    <div class="smallGapLeftRight">
         <div class="colorPrimaryAndCenter">{{resource.aboutTitle}}</div>
 
-        <div class="colorSecondryAndLeft" [innerHtml] = "resource.somethingAboutMe"></div>
+        <div class="colorSecondryAndLeft" [innerHtml]="resource.somethingAboutMe"></div>
 
         <div class="colorPrimaryAndLeft">{{resource.experience}}</div>
 
@@ -12,24 +12,22 @@
             <md-grid-tile *ngFor="let experience of resource.experienceDetailsArray;let index=index" [style.background]="resource.colors[index%3]"
                 [colspan]="1" [rowspan]="1">
                 <div style="display: flex;text-align: center;height:100%;width: 100%;flex-direction: row">
-                <div style="flex:0.5" class="colorSecondryAndCenter">{{experience.name}}</div>
-                <div style="flex:0.5" class="colorSecondryAndCenter">{{experience.post}}</div>
+                    <div style="flex:0.5" class="colorSecondryAndCenter">{{experience.name}}</div>
+                    <div style="flex:0.5" class="colorSecondryAndCenter">{{experience.post}}</div>
                 </div>
             </md-grid-tile>
         </md-grid-list>
 
         <md-chip-list class="mat-chip-list-stacked">
-            <md-chip (click) = "downloadResume()" class="paddingMedium cursor" selected="true" color="primary">
+            <md-chip (click)="downloadResume()" class="paddingMedium cursor" selected="true" color="primary">
                 {{resource.downLoadResume}}
             </md-chip>
         </md-chip-list>
 
         <div style="margin-top: 10px" class="colorPrimaryAndLeft">{{resource.aboutWebSite}}</div>
 
-        <div class="colorSecondryAndLeft" [innerHtml] = "resource.aboutWebSiteDescription"></div>
+        <div class="colorSecondryAndLeft" [innerHtml]="resource.aboutWebSiteDescription"></div>
 
-        </div>
+    </div>
 
-
-</div>
-  
+</md-card>
