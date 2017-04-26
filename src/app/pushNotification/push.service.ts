@@ -17,16 +17,13 @@ export class PushNotificationService {
         let body : PushNotificationBean = new PushNotificationBean();
         body.data = data;
         body.registration_ids = registrationId;
-        console.log("the asset api is " + api1)
-   
-        console.log("Asset body is " + JSON.stringify(body));
         let headers = new Headers({
             'Content-Type': 'application/json',
             'Authorization' : 'key=AAAAUvGTivk:APA91bHfFfY-33JgVD_yHn3nsb5CHXoUQ3HN0LvDR-mjqEDNpxE4RDZtXbZVxxSEddmKJVuLip1jBN7a8qfd5_iqqgaxCLcui2zj87k3_rYRvfdkXX0WCmJlTHJxf24X8IaG28My2X1n'
         });
         let options = new RequestOptions({headers: headers});
         return this.http.post(api1, JSON.stringify(body), options).toPromise().then(response => {
-           console.log(response.json());
+         
 
         }).catch(error => {
             let details = error.json().messages;

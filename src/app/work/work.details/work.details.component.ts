@@ -6,6 +6,7 @@ import { Router } from "@angular/router"
 import { WorkDetailModel } from "./work.details.model"
 
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+declare var ga: Function;
 @Component({
   templateUrl: './work.details.component.html',
   providers: [WorkDetailModel]
@@ -19,13 +20,14 @@ export class WorkDetailsComponent {
     private router: Router,
     private selectedWork: WorkDetailModel,
     private appComponent: AppComponent) {
-    console.log("this work is " + JSON.stringify(WorkComponent.selectedWork));
 
     this.selectedWork = WorkComponent.selectedWork;
     if (this.selectedWork == null) {
       this.router.navigate(["work"]);
       return;
     }
+
+
     this.appComponent.changeTitleTo(this.selectedWork.title);
 
     this.innerWidth = (window.screen.width);
@@ -34,7 +36,20 @@ export class WorkDetailsComponent {
     this.router.events.subscribe((event) => {
       this.selectedWork = WorkComponent.selectedWork;
       this.appComponent.changeTitleTo(this.selectedWork.title);
+
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Work Hit',
+        eventAction: 'Hit',
+        eventLabel: "Detail Page " + this.selectedWork.title
+      });
+
     });
+
+    ga('set', 'page', "WorkDetailsComponent" + " " + this.selectedWork.title);
+    ga('send', 'pageview')
+
+
   }
 
 

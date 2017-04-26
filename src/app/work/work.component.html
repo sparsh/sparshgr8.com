@@ -1,6 +1,6 @@
 
-<div  class="smallGapLeftRight" (window:resize)="onResize($event)"  style="display: flex;flex-direction: row;height:100%">
-    <div [ngStyle]="{'flex': url.indexOf('Inner')>-1?innerWidth>700?0.29:0:1}">
+<div class="cardMargin" (window:resize)="onResize($event)"  style="display: flex;flex-direction: row;height:100%;position:relative">
+    <div style="height:100%;overflow-y:auto;" [ngStyle]="{'flex': url.indexOf('Inner')>-1?innerWidth>700?0.29:0:1}">
         <md-grid-list rowHeight="350px" [cols]="getColumnOnBasisOfDeviceWidth()">
             <md-grid-tile (click)="openWorkDetails(index)" *ngFor="let work of workDetailsArray;let index=index" [colspan]="1"
                 [rowspan]="1" (click)="openWorkDetails(work)">
@@ -16,7 +16,7 @@
     </div>
 
 
-    <div class="smallGapLeftRight" [ngStyle]="{'flex': url.indexOf('Inner')>-1?innerWidth>700?0.70:1:0}" style=" overflow: auto; max-height: 100%; margin-top: 1%; margin-bottom: auto">
+    <div [ngStyle]="{'flex': url.indexOf('Inner')>-1?innerWidth>700?0.70:1:0}" style="height:100%">
         <router-outlet></router-outlet>
     </div>
 

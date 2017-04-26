@@ -8,6 +8,7 @@ import { AngularFire, FirebaseListObservable, AngularFireDatabase } from 'angula
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { ValidationService } from '../validation.service'
 import { PushNotificationService } from '../pushNotification/push.service'
+declare var ga: Function;
 @Component({
   templateUrl: './contact.component.html',
   providers: [PushNotificationService]
@@ -35,9 +36,8 @@ export class ContactComponent {
     af.database.list('/regToken').subscribe(
       data => {
         if (data) {
-          for (var i = 0; i < data.length; i++) 
+          for (var i = 0; i < data.length; i++)
             this.regTokenArray.push(data[i].regToken);
-          console.log(JSON.stringify(this.regTokenArray));
         }
       },
       error => {
@@ -61,6 +61,12 @@ export class ContactComponent {
       if (navigator.onLine) {
         dialogRef.componentInstance['message'] = this.resource.contactSendSuccess;
         if (this.regTokenArray) {
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'Contact Push',
+            eventAction: 'Sent',
+            eventLabel: "person " + contact.fullName
+          });
           this.pushService.postLandAssetFutureData(this.contact, this.regTokenArray);
         }
         this.contactForm.reset();

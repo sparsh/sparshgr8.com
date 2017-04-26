@@ -1,10 +1,10 @@
- <md-grid-list (window:resize)="onResize($event)" rowHeight="700px" [cols]="getColumnOnBasisOfDeviceWidth()">
+ <md-grid-list style="width:100%;" (window:resize)="onResize($event)" rowHeight="700px" [cols]="getColumnOnBasisOfDeviceWidth()">
         <md-grid-tile *ngFor="let homeImage of resource.homeImageDetailsArray;let index=index">
             <img [src]="homeImage.path">
         </md-grid-tile>
     </md-grid-list>
 <!--<md-grid-list cols="3">
-        <div *ngFor="let homeImage of resource.homeImageDetailsArray;let index=index" 
+        <div *ngFor="le`t homeImage of resource.homeImageDetailsArray;let index=index" 
         >
             <img [src] = "homeImage.path">
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 import { Resource } from './app.resource'
+declare var ga: Function;
 @Component({
   selector: 'my-app',
   templateUrl: "./app.component.html"
@@ -54,7 +55,7 @@ export class AppComponent implements OnInit {
     if (this.url.indexOf("home") == -1)
       this.icon = this.resource.backIcon;
     else if (this.url.indexOf("home") > -1) {
-    this.toolbarTitle = this.resource.personName;
+      this.toolbarTitle = this.resource.personName;
       this.icon = this.resource.hamburgIcon;
     }
 
@@ -63,7 +64,18 @@ export class AppComponent implements OnInit {
 
   goToRouteLink(path: string, sidenav: any) {
     sidenav.close();
+
+    ga('set', 'page',path);
+    ga('send', 'pageview')
     this.router.navigate(["./" + path]);
+
+  }
+
+
+
+  openLink(link: string) {
+    var win = window.open(link, '_blank');
+    win.focus();
   }
   //Inner describes wether they are inner pages or not.
   // all the pages which are on top of stack having

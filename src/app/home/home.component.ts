@@ -23,7 +23,7 @@ export class HomeComponent {
   getColumnOnBasisOfDeviceWidth() {
 
     let columns : number = Math.floor(this.innerWidth/400);
-    return columns == 0 ? 1 : columns;
+    return columns == 0 ? 1 : columns>3?3:columns;
 
 
   }
